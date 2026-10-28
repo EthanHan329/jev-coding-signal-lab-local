@@ -1,0 +1,4730 @@
+{
+  "generated_at": "2026-09-23T11:12:54.821Z",
+  "models": [
+    "jev-1.13",
+    "qwen/qwen3-30b-a3b-instruct-2507",
+    "deepseek/deepseek-v4-flash-0731"
+  ],
+  "results": [
+    {
+      "id": "C01",
+      "item": {
+        "id": "C01",
+        "lang": "TypeScript · React",
+        "query": "Fix the product table skipping the final page when the item count is an exact multiple of the page size.",
+        "intent": "bug_fix",
+        "complexity": 2,
+        "risk": "low"
+      },
+      "modelKey": "jev",
+      "modelLabel": "Jev 1.13",
+      "servedModel": "typesafe/jev-1.13-20260917",
+      "intent": "bug_fix",
+      "risk": "low",
+      "complexity": 0.91,
+      "signals": {
+        "needs_repository_tools": 0.78,
+        "needs_agentic_workflow": 0.63,
+        "needs_long_context": 0.28,
+        "requirements_ambiguous": 0.53,
+        "security_sensitive": 0.03,
+        "tests_executable": 0.81
+      },
+      "latency": 869.1000000014901,
+      "cost": 0.00003297,
+      "runs": 1,
+      "raw": [
+        {
+          "intent": {
+            "type": "choice",
+            "choice": "bug_fix",
+            "probabilities": {
+              "bug_fix": 1,
+              "refactor": 0,
+              "feature": 0,
+              "review": 0,
+              "test_generation": 0,
+              "other": 0,
+              "migration": 0
+            },
+            "confidence": 1
+          },
+          "complexity": {
+            "type": "score",
+            "score": 0.91,
+            "legend": {
+              "0": "Trivial edit",
+              "1": "Localized change",
+              "2": "Moderate multi-file change",
+              "3": "Cross-module change",
+              "4": "Architectural or highly coupled change"
+            },
+            "probabilities": {
+              "0": 0.14,
+              "1": 0.81,
+              "2": 0.04,
+              "3": 0.01,
+              "4": 0
+            },
+            "confidence": 0.84
+          },
+          "risk": {
+            "type": "choice",
+            "choice": "low",
+            "probabilities": {
+              "medium": 0.31,
+              "critical": 0,
+              "high": 0,
+              "low": 0.69
+            },
+            "confidence": 0.59
+          },
+          "needs_repository_tools": {
+            "type": "noul",
+            "noul": 0.78
+          },
+          "needs_agentic_workflow": {
+            "type": "noul",
+            "noul": 0.63
+          },
+          "needs_long_context": {
+            "type": "noul",
+            "noul": 0.28
+          },
+          "requirements_ambiguous": {
+            "type": "noul",
+            "noul": 0.53
+          },
+          "security_sensitive": {
+            "type": "noul",
+            "noul": 0.03
+          },
+          "tests_executable": {
+            "type": "noul",
+            "noul": 0.81
+          }
+        }
+      ]
+    },
+    {
+      "id": "C02",
+      "item": {
+        "id": "C02",
+        "lang": "Python · FastAPI",
+        "query": "Add asynchronous webhook delivery with exponential backoff, a maximum retry count, and delivery-status tracking.",
+        "intent": "feature",
+        "complexity": 3,
+        "risk": "medium"
+      },
+      "modelKey": "jev",
+      "modelLabel": "Jev 1.13",
+      "servedModel": "typesafe/jev-1.13-20260917",
+      "intent": "feature",
+      "risk": "medium",
+      "complexity": 3.03,
+      "signals": {
+        "needs_repository_tools": 0.76,
+        "needs_agentic_workflow": 0.82,
+        "needs_long_context": 0.72,
+        "requirements_ambiguous": 0.58,
+        "security_sensitive": 0.47,
+        "tests_executable": 0.77
+      },
+      "latency": 328.69999999552965,
+      "cost": 0.000032844,
+      "runs": 1,
+      "raw": [
+        {
+          "intent": {
+            "type": "choice",
+            "choice": "feature",
+            "probabilities": {
+              "other": 0,
+              "test_generation": 0,
+              "bug_fix": 0,
+              "refactor": 0,
+              "migration": 0,
+              "review": 0,
+              "feature": 1
+            },
+            "confidence": 1
+          },
+          "complexity": {
+            "type": "score",
+            "score": 3.03,
+            "legend": {
+              "0": "Trivial edit",
+              "1": "Localized change",
+              "2": "Moderate multi-file change",
+              "3": "Cross-module change",
+              "4": "Architectural or highly coupled change"
+            },
+            "probabilities": {
+              "0": 0,
+              "1": 0,
+              "2": 0.12,
+              "3": 0.73,
+              "4": 0.15
+            },
+            "confidence": 0.78
+          },
+          "risk": {
+            "type": "choice",
+            "choice": "medium",
+            "probabilities": {
+              "critical": 0.01,
+              "medium": 0.96,
+              "low": 0.01,
+              "high": 0.02
+            },
+            "confidence": 0.95
+          },
+          "needs_repository_tools": {
+            "type": "noul",
+            "noul": 0.76
+          },
+          "needs_agentic_workflow": {
+            "type": "noul",
+            "noul": 0.82
+          },
+          "needs_long_context": {
+            "type": "noul",
+            "noul": 0.72
+          },
+          "requirements_ambiguous": {
+            "type": "noul",
+            "noul": 0.58
+          },
+          "security_sensitive": {
+            "type": "noul",
+            "noul": 0.47
+          },
+          "tests_executable": {
+            "type": "noul",
+            "noul": 0.77
+          }
+        }
+      ]
+    },
+    {
+      "id": "C03",
+      "item": {
+        "id": "C03",
+        "lang": "Java · Spring Boot",
+        "query": "Merge three duplicated configuration loaders into one typed component without changing precedence rules.",
+        "intent": "refactor",
+        "complexity": 3,
+        "risk": "low"
+      },
+      "modelKey": "jev",
+      "modelLabel": "Jev 1.13",
+      "servedModel": "typesafe/jev-1.13-20260917",
+      "intent": "refactor",
+      "risk": "medium",
+      "complexity": 2.44,
+      "signals": {
+        "needs_repository_tools": 0.88,
+        "needs_agentic_workflow": 0.88,
+        "needs_long_context": 0.78,
+        "requirements_ambiguous": 0.67,
+        "security_sensitive": 0.43,
+        "tests_executable": 0.83
+      },
+      "latency": 404,
+      "cost": 0.000032592,
+      "runs": 1,
+      "raw": [
+        {
+          "intent": {
+            "type": "choice",
+            "choice": "refactor",
+            "probabilities": {
+              "migration": 0,
+              "bug_fix": 0,
+              "test_generation": 0,
+              "feature": 0,
+              "review": 0,
+              "refactor": 1,
+              "other": 0
+            },
+            "confidence": 1
+          },
+          "complexity": {
+            "type": "score",
+            "score": 2.44,
+            "legend": {
+              "0": "Trivial edit",
+              "1": "Localized change",
+              "2": "Moderate multi-file change",
+              "3": "Cross-module change",
+              "4": "Architectural or highly coupled change"
+            },
+            "probabilities": {
+              "0": 0,
+              "1": 0.01,
+              "2": 0.62,
+              "3": 0.29,
+              "4": 0.08
+            },
+            "confidence": 0.61
+          },
+          "risk": {
+            "type": "choice",
+            "choice": "medium",
+            "probabilities": {
+              "low": 0.03,
+              "medium": 0.8,
+              "high": 0.16,
+              "critical": 0.01
+            },
+            "confidence": 0.74
+          },
+          "needs_repository_tools": {
+            "type": "noul",
+            "noul": 0.88
+          },
+          "needs_agentic_workflow": {
+            "type": "noul",
+            "noul": 0.88
+          },
+          "needs_long_context": {
+            "type": "noul",
+            "noul": 0.78
+          },
+          "requirements_ambiguous": {
+            "type": "noul",
+            "noul": 0.67
+          },
+          "security_sensitive": {
+            "type": "noul",
+            "noul": 0.43
+          },
+          "tests_executable": {
+            "type": "noul",
+            "noul": 0.83
+          }
+        }
+      ]
+    },
+    {
+      "id": "C04",
+      "item": {
+        "id": "C04",
+        "lang": "Rust · Parser",
+        "query": "Write unit tests for the configuration parser covering comments, escaped values, empty sections, and malformed headers.",
+        "intent": "test_generation",
+        "complexity": 2,
+        "risk": "low"
+      },
+      "modelKey": "jev",
+      "modelLabel": "Jev 1.13",
+      "servedModel": "typesafe/jev-1.13-20260917",
+      "intent": "test_generation",
+      "risk": "low",
+      "complexity": 1.31,
+      "signals": {
+        "needs_repository_tools": 0.74,
+        "needs_agentic_workflow": 0.78,
+        "needs_long_context": 0.33,
+        "requirements_ambiguous": 0.46,
+        "security_sensitive": 0.18,
+        "tests_executable": 0.92
+      },
+      "latency": 417.70000000298023,
+      "cost": 0.000032844,
+      "runs": 1,
+      "raw": [
+        {
+          "intent": {
+            "type": "choice",
+            "choice": "test_generation",
+            "probabilities": {
+              "migration": 0,
+              "other": 0,
+              "test_generation": 1,
+              "feature": 0,
+              "review": 0,
+              "refactor": 0,
+              "bug_fix": 0
+            },
+            "confidence": 1
+          },
+          "complexity": {
+            "type": "score",
+            "score": 1.31,
+            "legend": {
+              "0": "Trivial edit",
+              "1": "Localized change",
+              "2": "Moderate multi-file change",
+              "3": "Cross-module change",
+              "4": "Architectural or highly coupled change"
+            },
+            "probabilities": {
+              "0": 0.02,
+              "1": 0.68,
+              "2": 0.28,
+              "3": 0.02,
+              "4": 0
+            },
+            "confidence": 0.71
+          },
+          "risk": {
+            "type": "choice",
+            "choice": "low",
+            "probabilities": {
+              "low": 0.99,
+              "medium": 0.01,
+              "high": 0,
+              "critical": 0
+            },
+            "confidence": 0.99
+          },
+          "needs_repository_tools": {
+            "type": "noul",
+            "noul": 0.74
+          },
+          "needs_agentic_workflow": {
+            "type": "noul",
+            "noul": 0.78
+          },
+          "needs_long_context": {
+            "type": "noul",
+            "noul": 0.33
+          },
+          "requirements_ambiguous": {
+            "type": "noul",
+            "noul": 0.46
+          },
+          "security_sensitive": {
+            "type": "noul",
+            "noul": 0.18
+          },
+          "tests_executable": {
+            "type": "noul",
+            "noul": 0.92
+          }
+        }
+      ]
+    },
+    {
+      "id": "C05",
+      "item": {
+        "id": "C05",
+        "lang": "Vue 2 → Vue 3",
+        "query": "Migrate the account settings screen to Vue 3 Composition API while preserving validation and analytics events.",
+        "intent": "migration",
+        "complexity": 4,
+        "risk": "medium"
+      },
+      "modelKey": "jev",
+      "modelLabel": "Jev 1.13",
+      "servedModel": "typesafe/jev-1.13-20260917",
+      "intent": "migration",
+      "risk": "medium",
+      "complexity": 2.34,
+      "signals": {
+        "needs_repository_tools": 0.93,
+        "needs_agentic_workflow": 0.92,
+        "needs_long_context": 0.79,
+        "requirements_ambiguous": 0.7,
+        "security_sensitive": 0.58,
+        "tests_executable": 0.76
+      },
+      "latency": 381.1000000014901,
+      "cost": 0.00003297,
+      "runs": 1,
+      "raw": [
+        {
+          "intent": {
+            "type": "choice",
+            "choice": "migration",
+            "probabilities": {
+              "migration": 1,
+              "bug_fix": 0,
+              "test_generation": 0,
+              "review": 0,
+              "feature": 0,
+              "refactor": 0,
+              "other": 0
+            },
+            "confidence": 1
+          },
+          "complexity": {
+            "type": "score",
+            "score": 2.34,
+            "legend": {
+              "0": "Trivial edit",
+              "1": "Localized change",
+              "2": "Moderate multi-file change",
+              "3": "Cross-module change",
+              "4": "Architectural or highly coupled change"
+            },
+            "probabilities": {
+              "0": 0,
+              "1": 0.05,
+              "2": 0.59,
+              "3": 0.34,
+              "4": 0.02
+            },
+            "confidence": 0.64
+          },
+          "risk": {
+            "type": "choice",
+            "choice": "medium",
+            "probabilities": {
+              "low": 0.01,
+              "medium": 0.75,
+              "high": 0.2,
+              "critical": 0.04
+            },
+            "confidence": 0.67
+          },
+          "needs_repository_tools": {
+            "type": "noul",
+            "noul": 0.93
+          },
+          "needs_agentic_workflow": {
+            "type": "noul",
+            "noul": 0.92
+          },
+          "needs_long_context": {
+            "type": "noul",
+            "noul": 0.79
+          },
+          "requirements_ambiguous": {
+            "type": "noul",
+            "noul": 0.7
+          },
+          "security_sensitive": {
+            "type": "noul",
+            "noul": 0.58
+          },
+          "tests_executable": {
+            "type": "noul",
+            "noul": 0.76
+          }
+        }
+      ]
+    },
+    {
+      "id": "C06",
+      "item": {
+        "id": "C06",
+        "lang": "SQL · PostgreSQL",
+        "query": "Review this slow reporting query and determine whether the proposed composite index matches its filters and sort order.",
+        "intent": "review",
+        "complexity": 2,
+        "risk": "low"
+      },
+      "modelKey": "jev",
+      "modelLabel": "Jev 1.13",
+      "servedModel": "typesafe/jev-1.13-20260917",
+      "intent": "review",
+      "risk": "low",
+      "complexity": 1.08,
+      "signals": {
+        "needs_repository_tools": 0.29,
+        "needs_agentic_workflow": 0.4,
+        "needs_long_context": 0.14,
+        "requirements_ambiguous": 0.64,
+        "security_sensitive": 0.06,
+        "tests_executable": 0.67
+      },
+      "latency": 313.8999999985099,
+      "cost": 0.000032844,
+      "runs": 1,
+      "raw": [
+        {
+          "intent": {
+            "type": "choice",
+            "choice": "review",
+            "probabilities": {
+              "test_generation": 0,
+              "other": 0,
+              "bug_fix": 0,
+              "review": 1,
+              "refactor": 0,
+              "feature": 0,
+              "migration": 0
+            },
+            "confidence": 1
+          },
+          "complexity": {
+            "type": "score",
+            "score": 1.08,
+            "legend": {
+              "0": "Trivial edit",
+              "1": "Localized change",
+              "2": "Moderate multi-file change",
+              "3": "Cross-module change",
+              "4": "Architectural or highly coupled change"
+            },
+            "probabilities": {
+              "0": 0.07,
+              "1": 0.83,
+              "2": 0.06,
+              "3": 0.04,
+              "4": 0
+            },
+            "confidence": 0.82
+          },
+          "risk": {
+            "type": "choice",
+            "choice": "low",
+            "probabilities": {
+              "critical": 0,
+              "low": 0.78,
+              "high": 0,
+              "medium": 0.22
+            },
+            "confidence": 0.7
+          },
+          "needs_repository_tools": {
+            "type": "noul",
+            "noul": 0.29
+          },
+          "needs_agentic_workflow": {
+            "type": "noul",
+            "noul": 0.4
+          },
+          "needs_long_context": {
+            "type": "noul",
+            "noul": 0.14
+          },
+          "requirements_ambiguous": {
+            "type": "noul",
+            "noul": 0.64
+          },
+          "security_sensitive": {
+            "type": "noul",
+            "noul": 0.06
+          },
+          "tests_executable": {
+            "type": "noul",
+            "noul": 0.67
+          }
+        }
+      ]
+    },
+    {
+      "id": "C07",
+      "item": {
+        "id": "C07",
+        "lang": "Java · Scheduling",
+        "query": "Fix recurring meetings shifting by one hour after daylight-saving transitions for users in multiple time zones.",
+        "intent": "bug_fix",
+        "complexity": 3,
+        "risk": "medium"
+      },
+      "modelKey": "jev",
+      "modelLabel": "Jev 1.13",
+      "servedModel": "typesafe/jev-1.13-20260917",
+      "intent": "bug_fix",
+      "risk": "medium",
+      "complexity": 2.93,
+      "signals": {
+        "needs_repository_tools": 0.77,
+        "needs_agentic_workflow": 0.85,
+        "needs_long_context": 0.78,
+        "requirements_ambiguous": 0.78,
+        "security_sensitive": 0.12,
+        "tests_executable": 0.82
+      },
+      "latency": 769.7000000029802,
+      "cost": 0.000032802,
+      "runs": 1,
+      "raw": [
+        {
+          "intent": {
+            "type": "choice",
+            "choice": "bug_fix",
+            "probabilities": {
+              "other": 0,
+              "review": 0,
+              "bug_fix": 1,
+              "test_generation": 0,
+              "migration": 0,
+              "feature": 0,
+              "refactor": 0
+            },
+            "confidence": 1
+          },
+          "complexity": {
+            "type": "score",
+            "score": 2.93,
+            "legend": {
+              "0": "Trivial edit",
+              "1": "Localized change",
+              "2": "Moderate multi-file change",
+              "3": "Cross-module change",
+              "4": "Architectural or highly coupled change"
+            },
+            "probabilities": {
+              "0": 0,
+              "1": 0,
+              "2": 0.14,
+              "3": 0.78,
+              "4": 0.08
+            },
+            "confidence": 0.81
+          },
+          "risk": {
+            "type": "choice",
+            "choice": "medium",
+            "probabilities": {
+              "medium": 0.75,
+              "critical": 0,
+              "low": 0,
+              "high": 0.25
+            },
+            "confidence": 0.66
+          },
+          "needs_repository_tools": {
+            "type": "noul",
+            "noul": 0.77
+          },
+          "needs_agentic_workflow": {
+            "type": "noul",
+            "noul": 0.85
+          },
+          "needs_long_context": {
+            "type": "noul",
+            "noul": 0.78
+          },
+          "requirements_ambiguous": {
+            "type": "noul",
+            "noul": 0.78
+          },
+          "security_sensitive": {
+            "type": "noul",
+            "noul": 0.12
+          },
+          "tests_executable": {
+            "type": "noul",
+            "noul": 0.82
+          }
+        }
+      ]
+    },
+    {
+      "id": "C08",
+      "item": {
+        "id": "C08",
+        "lang": "C# · ASP.NET",
+        "query": "Add CSV export to the inventory search endpoint using the existing filters and a configurable row limit.",
+        "intent": "feature",
+        "complexity": 2,
+        "risk": "low"
+      },
+      "modelKey": "jev",
+      "modelLabel": "Jev 1.13",
+      "servedModel": "typesafe/jev-1.13-20260917",
+      "intent": "feature",
+      "risk": "medium",
+      "complexity": 1.86,
+      "signals": {
+        "needs_repository_tools": 0.88,
+        "needs_agentic_workflow": 0.82,
+        "needs_long_context": 0.49,
+        "requirements_ambiguous": 0.59,
+        "security_sensitive": 0.34,
+        "tests_executable": 0.8
+      },
+      "latency": 419.5,
+      "cost": 0.000032802,
+      "runs": 1,
+      "raw": [
+        {
+          "intent": {
+            "type": "choice",
+            "choice": "feature",
+            "probabilities": {
+              "refactor": 0,
+              "review": 0,
+              "feature": 1,
+              "test_generation": 0,
+              "migration": 0,
+              "other": 0,
+              "bug_fix": 0
+            },
+            "confidence": 1
+          },
+          "complexity": {
+            "type": "score",
+            "score": 1.86,
+            "legend": {
+              "0": "Trivial edit",
+              "1": "Localized change",
+              "2": "Moderate multi-file change",
+              "3": "Cross-module change",
+              "4": "Architectural or highly coupled change"
+            },
+            "probabilities": {
+              "0": 0,
+              "1": 0.2,
+              "2": 0.74,
+              "3": 0.06,
+              "4": 0
+            },
+            "confidence": 0.78
+          },
+          "risk": {
+            "type": "choice",
+            "choice": "medium",
+            "probabilities": {
+              "critical": 0,
+              "low": 0.07,
+              "medium": 0.92,
+              "high": 0.01
+            },
+            "confidence": 0.9
+          },
+          "needs_repository_tools": {
+            "type": "noul",
+            "noul": 0.88
+          },
+          "needs_agentic_workflow": {
+            "type": "noul",
+            "noul": 0.82
+          },
+          "needs_long_context": {
+            "type": "noul",
+            "noul": 0.49
+          },
+          "requirements_ambiguous": {
+            "type": "noul",
+            "noul": 0.59
+          },
+          "security_sensitive": {
+            "type": "noul",
+            "noul": 0.34
+          },
+          "tests_executable": {
+            "type": "noul",
+            "noul": 0.8
+          }
+        }
+      ]
+    },
+    {
+      "id": "C09",
+      "item": {
+        "id": "C09",
+        "lang": "Python · Machine learning",
+        "query": "Review the training pipeline for target leakage caused by features calculated after the prediction timestamp.",
+        "intent": "review",
+        "complexity": 4,
+        "risk": "high"
+      },
+      "modelKey": "jev",
+      "modelLabel": "Jev 1.13",
+      "servedModel": "typesafe/jev-1.13-20260917",
+      "intent": "review",
+      "risk": "medium",
+      "complexity": 2.78,
+      "signals": {
+        "needs_repository_tools": 0.77,
+        "needs_agentic_workflow": 0.81,
+        "needs_long_context": 0.72,
+        "requirements_ambiguous": 0.64,
+        "security_sensitive": 0.11,
+        "tests_executable": 0.76
+      },
+      "latency": 354.6000000014901,
+      "cost": 0.000032676,
+      "runs": 1,
+      "raw": [
+        {
+          "intent": {
+            "type": "choice",
+            "choice": "review",
+            "probabilities": {
+              "other": 0,
+              "review": 0.9,
+              "feature": 0,
+              "migration": 0,
+              "test_generation": 0,
+              "refactor": 0,
+              "bug_fix": 0.1
+            },
+            "confidence": 0.88
+          },
+          "complexity": {
+            "type": "score",
+            "score": 2.78,
+            "legend": {
+              "0": "Trivial edit",
+              "1": "Localized change",
+              "2": "Moderate multi-file change",
+              "3": "Cross-module change",
+              "4": "Architectural or highly coupled change"
+            },
+            "probabilities": {
+              "0": 0,
+              "1": 0.04,
+              "2": 0.21,
+              "3": 0.68,
+              "4": 0.07
+            },
+            "confidence": 0.7
+          },
+          "risk": {
+            "type": "choice",
+            "choice": "medium",
+            "probabilities": {
+              "low": 0.13,
+              "critical": 0,
+              "medium": 0.77,
+              "high": 0.1
+            },
+            "confidence": 0.69
+          },
+          "needs_repository_tools": {
+            "type": "noul",
+            "noul": 0.77
+          },
+          "needs_agentic_workflow": {
+            "type": "noul",
+            "noul": 0.81
+          },
+          "needs_long_context": {
+            "type": "noul",
+            "noul": 0.72
+          },
+          "requirements_ambiguous": {
+            "type": "noul",
+            "noul": 0.64
+          },
+          "security_sensitive": {
+            "type": "noul",
+            "noul": 0.11
+          },
+          "tests_executable": {
+            "type": "noul",
+            "noul": 0.76
+          }
+        }
+      ]
+    },
+    {
+      "id": "C10",
+      "item": {
+        "id": "C10",
+        "lang": "Kotlin · HTTP client",
+        "query": "Create integration tests for retry behavior on timeouts, HTTP 429 responses, and successful recovery.",
+        "intent": "test_generation",
+        "complexity": 3,
+        "risk": "medium"
+      },
+      "modelKey": "jev",
+      "modelLabel": "Jev 1.13",
+      "servedModel": "typesafe/jev-1.13-20260917",
+      "intent": "test_generation",
+      "risk": "low",
+      "complexity": 2.11,
+      "signals": {
+        "needs_repository_tools": 0.81,
+        "needs_agentic_workflow": 0.83,
+        "needs_long_context": 0.53,
+        "requirements_ambiguous": 0.51,
+        "security_sensitive": 0.09,
+        "tests_executable": 0.82
+      },
+      "latency": 407,
+      "cost": 0.000032928,
+      "runs": 1,
+      "raw": [
+        {
+          "intent": {
+            "type": "choice",
+            "choice": "test_generation",
+            "probabilities": {
+              "feature": 0,
+              "migration": 0,
+              "test_generation": 1,
+              "review": 0,
+              "bug_fix": 0,
+              "other": 0,
+              "refactor": 0
+            },
+            "confidence": 1
+          },
+          "complexity": {
+            "type": "score",
+            "score": 2.11,
+            "legend": {
+              "0": "Trivial edit",
+              "1": "Localized change",
+              "2": "Moderate multi-file change",
+              "3": "Cross-module change",
+              "4": "Architectural or highly coupled change"
+            },
+            "probabilities": {
+              "0": 0,
+              "1": 0.1,
+              "2": 0.6799999999999999,
+              "3": 0.21,
+              "4": 0.01
+            },
+            "confidence": 0.73
+          },
+          "risk": {
+            "type": "choice",
+            "choice": "low",
+            "probabilities": {
+              "critical": 0,
+              "medium": 0.06,
+              "low": 0.94,
+              "high": 0
+            },
+            "confidence": 0.93
+          },
+          "needs_repository_tools": {
+            "type": "noul",
+            "noul": 0.81
+          },
+          "needs_agentic_workflow": {
+            "type": "noul",
+            "noul": 0.83
+          },
+          "needs_long_context": {
+            "type": "noul",
+            "noul": 0.53
+          },
+          "requirements_ambiguous": {
+            "type": "noul",
+            "noul": 0.51
+          },
+          "security_sensitive": {
+            "type": "noul",
+            "noul": 0.09
+          },
+          "tests_executable": {
+            "type": "noul",
+            "noul": 0.82
+          }
+        }
+      ]
+    },
+    {
+      "id": "C11",
+      "item": {
+        "id": "C11",
+        "lang": "MySQL 5.7 → 8.0",
+        "query": "Upgrade the application database to MySQL 8, update incompatible SQL modes, and verify existing replication jobs.",
+        "intent": "migration",
+        "complexity": 4,
+        "risk": "high"
+      },
+      "modelKey": "jev",
+      "modelLabel": "Jev 1.13",
+      "servedModel": "typesafe/jev-1.13-20260917",
+      "intent": "migration",
+      "risk": "high",
+      "complexity": 3.33,
+      "signals": {
+        "needs_repository_tools": 0.67,
+        "needs_agentic_workflow": 0.91,
+        "needs_long_context": 0.83,
+        "requirements_ambiguous": 0.74,
+        "security_sensitive": 0.77,
+        "tests_executable": 0.56
+      },
+      "latency": 365.8999999985099,
+      "cost": 0.00003318,
+      "runs": 1,
+      "raw": [
+        {
+          "intent": {
+            "type": "choice",
+            "choice": "migration",
+            "probabilities": {
+              "migration": 1,
+              "test_generation": 0,
+              "other": 0,
+              "feature": 0,
+              "refactor": 0,
+              "review": 0,
+              "bug_fix": 0
+            },
+            "confidence": 1
+          },
+          "complexity": {
+            "type": "score",
+            "score": 3.33,
+            "legend": {
+              "0": "Trivial edit",
+              "1": "Localized change",
+              "2": "Moderate multi-file change",
+              "3": "Cross-module change",
+              "4": "Architectural or highly coupled change"
+            },
+            "probabilities": {
+              "0": 0,
+              "1": 0,
+              "2": 0.02,
+              "3": 0.63,
+              "4": 0.35
+            },
+            "confidence": 0.69
+          },
+          "risk": {
+            "type": "choice",
+            "choice": "high",
+            "probabilities": {
+              "medium": 0.04,
+              "critical": 0.03,
+              "high": 0.93,
+              "low": 0
+            },
+            "confidence": 0.9
+          },
+          "needs_repository_tools": {
+            "type": "noul",
+            "noul": 0.67
+          },
+          "needs_agentic_workflow": {
+            "type": "noul",
+            "noul": 0.91
+          },
+          "needs_long_context": {
+            "type": "noul",
+            "noul": 0.83
+          },
+          "requirements_ambiguous": {
+            "type": "noul",
+            "noul": 0.74
+          },
+          "security_sensitive": {
+            "type": "noul",
+            "noul": 0.77
+          },
+          "tests_executable": {
+            "type": "noul",
+            "noul": 0.56
+          }
+        }
+      ]
+    },
+    {
+      "id": "C12",
+      "item": {
+        "id": "C12",
+        "lang": "C# · Logging",
+        "query": "Replace ad-hoc string logging in six services with structured event templates while preserving log levels.",
+        "intent": "refactor",
+        "complexity": 2,
+        "risk": "medium"
+      },
+      "modelKey": "jev",
+      "modelLabel": "Jev 1.13",
+      "servedModel": "typesafe/jev-1.13-20260917",
+      "intent": "refactor",
+      "risk": "medium",
+      "complexity": 2.84,
+      "signals": {
+        "needs_repository_tools": 0.95,
+        "needs_agentic_workflow": 0.91,
+        "needs_long_context": 0.91,
+        "requirements_ambiguous": 0.65,
+        "security_sensitive": 0.17,
+        "tests_executable": 0.75
+      },
+      "latency": 311.80000000447035,
+      "cost": 0.00003276,
+      "runs": 1,
+      "raw": [
+        {
+          "intent": {
+            "type": "choice",
+            "choice": "refactor",
+            "probabilities": {
+              "bug_fix": 0,
+              "feature": 0.01,
+              "review": 0,
+              "migration": 0.03,
+              "other": 0,
+              "test_generation": 0,
+              "refactor": 0.96
+            },
+            "confidence": 0.95
+          },
+          "complexity": {
+            "type": "score",
+            "score": 2.84,
+            "legend": {
+              "0": "Trivial edit",
+              "1": "Localized change",
+              "2": "Moderate multi-file change",
+              "3": "Cross-module change",
+              "4": "Architectural or highly coupled change"
+            },
+            "probabilities": {
+              "0": 0,
+              "1": 0,
+              "2": 0.22,
+              "3": 0.72,
+              "4": 0.06
+            },
+            "confidence": 0.76
+          },
+          "risk": {
+            "type": "choice",
+            "choice": "medium",
+            "probabilities": {
+              "high": 0.04,
+              "medium": 0.8,
+              "critical": 0,
+              "low": 0.16
+            },
+            "confidence": 0.74
+          },
+          "needs_repository_tools": {
+            "type": "noul",
+            "noul": 0.95
+          },
+          "needs_agentic_workflow": {
+            "type": "noul",
+            "noul": 0.91
+          },
+          "needs_long_context": {
+            "type": "noul",
+            "noul": 0.91
+          },
+          "requirements_ambiguous": {
+            "type": "noul",
+            "noul": 0.65
+          },
+          "security_sensitive": {
+            "type": "noul",
+            "noul": 0.17
+          },
+          "tests_executable": {
+            "type": "noul",
+            "noul": 0.75
+          }
+        }
+      ]
+    },
+    {
+      "id": "C13",
+      "item": {
+        "id": "C13",
+        "lang": "Node.js · Redis",
+        "query": "Fix user profile updates remaining stale because cache invalidation runs before the database transaction commits.",
+        "intent": "bug_fix",
+        "complexity": 3,
+        "risk": "medium"
+      },
+      "modelKey": "jev",
+      "modelLabel": "Jev 1.13",
+      "servedModel": "typesafe/jev-1.13-20260917",
+      "intent": "bug_fix",
+      "risk": "medium",
+      "complexity": 2.41,
+      "signals": {
+        "needs_repository_tools": 0.85,
+        "needs_agentic_workflow": 0.74,
+        "needs_long_context": 0.56,
+        "requirements_ambiguous": 0.37,
+        "security_sensitive": 0.72,
+        "tests_executable": 0.8
+      },
+      "latency": 515.5,
+      "cost": 0.000032802,
+      "runs": 1,
+      "raw": [
+        {
+          "intent": {
+            "type": "choice",
+            "choice": "bug_fix",
+            "probabilities": {
+              "test_generation": 0,
+              "other": 0,
+              "bug_fix": 1,
+              "review": 0,
+              "refactor": 0,
+              "migration": 0,
+              "feature": 0
+            },
+            "confidence": 1
+          },
+          "complexity": {
+            "type": "score",
+            "score": 2.41,
+            "legend": {
+              "0": "Trivial edit",
+              "1": "Localized change",
+              "2": "Moderate multi-file change",
+              "3": "Cross-module change",
+              "4": "Architectural or highly coupled change"
+            },
+            "probabilities": {
+              "0": 0,
+              "1": 0.14,
+              "2": 0.31,
+              "3": 0.53,
+              "4": 0.02
+            },
+            "confidence": 0.48
+          },
+          "risk": {
+            "type": "choice",
+            "choice": "medium",
+            "probabilities": {
+              "critical": 0.04,
+              "high": 0.02,
+              "low": 0.05,
+              "medium": 0.89
+            },
+            "confidence": 0.86
+          },
+          "needs_repository_tools": {
+            "type": "noul",
+            "noul": 0.85
+          },
+          "needs_agentic_workflow": {
+            "type": "noul",
+            "noul": 0.74
+          },
+          "needs_long_context": {
+            "type": "noul",
+            "noul": 0.56
+          },
+          "requirements_ambiguous": {
+            "type": "noul",
+            "noul": 0.37
+          },
+          "security_sensitive": {
+            "type": "noul",
+            "noul": 0.72
+          },
+          "tests_executable": {
+            "type": "noul",
+            "noul": 0.8
+          }
+        }
+      ]
+    },
+    {
+      "id": "C14",
+      "item": {
+        "id": "C14",
+        "lang": "Go · Feature flags",
+        "query": "Add percentage-based feature rollout with stable user bucketing, team overrides, and an emergency disable switch.",
+        "intent": "feature",
+        "complexity": 4,
+        "risk": "medium"
+      },
+      "modelKey": "jev",
+      "modelLabel": "Jev 1.13",
+      "servedModel": "typesafe/jev-1.13-20260917",
+      "intent": "feature",
+      "risk": "medium",
+      "complexity": 3.12,
+      "signals": {
+        "needs_repository_tools": 0.88,
+        "needs_agentic_workflow": 0.89,
+        "needs_long_context": 0.8,
+        "requirements_ambiguous": 0.59,
+        "security_sensitive": 0.32,
+        "tests_executable": 0.84
+      },
+      "latency": 445,
+      "cost": 0.000032886,
+      "runs": 1,
+      "raw": [
+        {
+          "intent": {
+            "type": "choice",
+            "choice": "feature",
+            "probabilities": {
+              "refactor": 0,
+              "migration": 0,
+              "review": 0,
+              "other": 0,
+              "bug_fix": 0,
+              "feature": 1,
+              "test_generation": 0
+            },
+            "confidence": 1
+          },
+          "complexity": {
+            "type": "score",
+            "score": 3.12,
+            "legend": {
+              "0": "Trivial edit",
+              "1": "Localized change",
+              "2": "Moderate multi-file change",
+              "3": "Cross-module change",
+              "4": "Architectural or highly coupled change"
+            },
+            "probabilities": {
+              "0": 0,
+              "1": 0,
+              "2": 0.06,
+              "3": 0.75,
+              "4": 0.19
+            },
+            "confidence": 0.79
+          },
+          "risk": {
+            "type": "choice",
+            "choice": "medium",
+            "probabilities": {
+              "medium": 0.84,
+              "high": 0.1,
+              "low": 0.05,
+              "critical": 0.01
+            },
+            "confidence": 0.78
+          },
+          "needs_repository_tools": {
+            "type": "noul",
+            "noul": 0.88
+          },
+          "needs_agentic_workflow": {
+            "type": "noul",
+            "noul": 0.89
+          },
+          "needs_long_context": {
+            "type": "noul",
+            "noul": 0.8
+          },
+          "requirements_ambiguous": {
+            "type": "noul",
+            "noul": 0.59
+          },
+          "security_sensitive": {
+            "type": "noul",
+            "noul": 0.32
+          },
+          "tests_executable": {
+            "type": "noul",
+            "noul": 0.84
+          }
+        }
+      ]
+    },
+    {
+      "id": "C15",
+      "item": {
+        "id": "C15",
+        "lang": "Terraform · Azure",
+        "query": "Add automated tests for a network module covering optional subnets, custom DNS, and invalid address ranges.",
+        "intent": "test_generation",
+        "complexity": 3,
+        "risk": "medium"
+      },
+      "modelKey": "jev",
+      "modelLabel": "Jev 1.13",
+      "servedModel": "typesafe/jev-1.13-20260917",
+      "intent": "test_generation",
+      "risk": "low",
+      "complexity": 2.27,
+      "signals": {
+        "needs_repository_tools": 0.9,
+        "needs_agentic_workflow": 0.9,
+        "needs_long_context": 0.68,
+        "requirements_ambiguous": 0.58,
+        "security_sensitive": 0.2,
+        "tests_executable": 0.6
+      },
+      "latency": 373.19999999552965,
+      "cost": 0.000032886,
+      "runs": 1,
+      "raw": [
+        {
+          "intent": {
+            "type": "choice",
+            "choice": "test_generation",
+            "probabilities": {
+              "bug_fix": 0,
+              "review": 0,
+              "other": 0,
+              "feature": 0,
+              "refactor": 0,
+              "test_generation": 1,
+              "migration": 0
+            },
+            "confidence": 1
+          },
+          "complexity": {
+            "type": "score",
+            "score": 2.27,
+            "legend": {
+              "0": "Trivial edit",
+              "1": "Localized change",
+              "2": "Moderate multi-file change",
+              "3": "Cross-module change",
+              "4": "Architectural or highly coupled change"
+            },
+            "probabilities": {
+              "0": 0,
+              "1": 0.05,
+              "2": 0.63,
+              "3": 0.32,
+              "4": 0
+            },
+            "confidence": 0.68
+          },
+          "risk": {
+            "type": "choice",
+            "choice": "low",
+            "probabilities": {
+              "critical": 0,
+              "low": 0.93,
+              "medium": 0.07,
+              "high": 0
+            },
+            "confidence": 0.91
+          },
+          "needs_repository_tools": {
+            "type": "noul",
+            "noul": 0.9
+          },
+          "needs_agentic_workflow": {
+            "type": "noul",
+            "noul": 0.9
+          },
+          "needs_long_context": {
+            "type": "noul",
+            "noul": 0.68
+          },
+          "requirements_ambiguous": {
+            "type": "noul",
+            "noul": 0.58
+          },
+          "security_sensitive": {
+            "type": "noul",
+            "noul": 0.2
+          },
+          "tests_executable": {
+            "type": "noul",
+            "noul": 0.6
+          }
+        }
+      ]
+    },
+    {
+      "id": "C16",
+      "item": {
+        "id": "C16",
+        "lang": "TypeScript · Monorepo",
+        "query": "Review the dependency graph and identify packages that violate the rule that UI modules cannot import data-access implementations.",
+        "intent": "review",
+        "complexity": 3,
+        "risk": "low"
+      },
+      "modelKey": "jev",
+      "modelLabel": "Jev 1.13",
+      "servedModel": "typesafe/jev-1.13-20260917",
+      "intent": "review",
+      "risk": "low",
+      "complexity": 3.11,
+      "signals": {
+        "needs_repository_tools": 0.92,
+        "needs_agentic_workflow": 0.67,
+        "needs_long_context": 0.92,
+        "requirements_ambiguous": 0.68,
+        "security_sensitive": 0.24,
+        "tests_executable": 0.78
+      },
+      "latency": 338.3999999985099,
+      "cost": 0.000033012,
+      "runs": 1,
+      "raw": [
+        {
+          "intent": {
+            "type": "choice",
+            "choice": "review",
+            "probabilities": {
+              "bug_fix": 0,
+              "migration": 0,
+              "other": 0,
+              "review": 1,
+              "refactor": 0,
+              "test_generation": 0,
+              "feature": 0
+            },
+            "confidence": 1
+          },
+          "complexity": {
+            "type": "score",
+            "score": 3.11,
+            "legend": {
+              "0": "Trivial edit",
+              "1": "Localized change",
+              "2": "Moderate multi-file change",
+              "3": "Cross-module change",
+              "4": "Architectural or highly coupled change"
+            },
+            "probabilities": {
+              "0": 0.01,
+              "1": 0.02,
+              "2": 0.06,
+              "3": 0.67,
+              "4": 0.24
+            },
+            "confidence": 0.69
+          },
+          "risk": {
+            "type": "choice",
+            "choice": "low",
+            "probabilities": {
+              "critical": 0,
+              "high": 0.04,
+              "low": 0.53,
+              "medium": 0.43
+            },
+            "confidence": 0.38
+          },
+          "needs_repository_tools": {
+            "type": "noul",
+            "noul": 0.92
+          },
+          "needs_agentic_workflow": {
+            "type": "noul",
+            "noul": 0.67
+          },
+          "needs_long_context": {
+            "type": "noul",
+            "noul": 0.92
+          },
+          "requirements_ambiguous": {
+            "type": "noul",
+            "noul": 0.68
+          },
+          "security_sensitive": {
+            "type": "noul",
+            "noul": 0.24
+          },
+          "tests_executable": {
+            "type": "noul",
+            "noul": 0.78
+          }
+        }
+      ]
+    },
+    {
+      "id": "C17",
+      "item": {
+        "id": "C17",
+        "lang": "Pandas → Polars",
+        "query": "Migrate a daily aggregation pipeline from Pandas to Polars while preserving null handling and output column order.",
+        "intent": "migration",
+        "complexity": 3,
+        "risk": "medium"
+      },
+      "modelKey": "jev",
+      "modelLabel": "Jev 1.13",
+      "servedModel": "typesafe/jev-1.13-20260917",
+      "intent": "migration",
+      "risk": "medium",
+      "complexity": 2.3,
+      "signals": {
+        "needs_repository_tools": 0.55,
+        "needs_agentic_workflow": 0.78,
+        "needs_long_context": 0.46,
+        "requirements_ambiguous": 0.72,
+        "security_sensitive": 0.07,
+        "tests_executable": 0.8
+      },
+      "latency": 340.20000000298023,
+      "cost": 0.00003297,
+      "runs": 1,
+      "raw": [
+        {
+          "intent": {
+            "type": "choice",
+            "choice": "migration",
+            "probabilities": {
+              "migration": 1,
+              "review": 0,
+              "feature": 0,
+              "test_generation": 0,
+              "bug_fix": 0,
+              "other": 0,
+              "refactor": 0
+            },
+            "confidence": 1
+          },
+          "complexity": {
+            "type": "score",
+            "score": 2.3,
+            "legend": {
+              "0": "Trivial edit",
+              "1": "Localized change",
+              "2": "Moderate multi-file change",
+              "3": "Cross-module change",
+              "4": "Architectural or highly coupled change"
+            },
+            "probabilities": {
+              "0": 0,
+              "1": 0.12,
+              "2": 0.49,
+              "3": 0.37,
+              "4": 0.02
+            },
+            "confidence": 0.55
+          },
+          "risk": {
+            "type": "choice",
+            "choice": "medium",
+            "probabilities": {
+              "critical": 0,
+              "medium": 0.93,
+              "high": 0.06,
+              "low": 0.01
+            },
+            "confidence": 0.91
+          },
+          "needs_repository_tools": {
+            "type": "noul",
+            "noul": 0.55
+          },
+          "needs_agentic_workflow": {
+            "type": "noul",
+            "noul": 0.78
+          },
+          "needs_long_context": {
+            "type": "noul",
+            "noul": 0.46
+          },
+          "requirements_ambiguous": {
+            "type": "noul",
+            "noul": 0.72
+          },
+          "security_sensitive": {
+            "type": "noul",
+            "noul": 0.07
+          },
+          "tests_executable": {
+            "type": "noul",
+            "noul": 0.8
+          }
+        }
+      ]
+    },
+    {
+      "id": "C18",
+      "item": {
+        "id": "C18",
+        "lang": "Swift · iOS",
+        "query": "Add offline search over downloaded articles with prefix matching and automatic index refresh after synchronization.",
+        "intent": "feature",
+        "complexity": 3,
+        "risk": "medium"
+      },
+      "modelKey": "jev",
+      "modelLabel": "Jev 1.13",
+      "servedModel": "typesafe/jev-1.13-20260917",
+      "intent": "feature",
+      "risk": "medium",
+      "complexity": 2.9,
+      "signals": {
+        "needs_repository_tools": 0.82,
+        "needs_agentic_workflow": 0.87,
+        "needs_long_context": 0.8,
+        "requirements_ambiguous": 0.59,
+        "security_sensitive": 0.28,
+        "tests_executable": 0.72
+      },
+      "latency": 413.1000000014901,
+      "cost": 0.000032676,
+      "runs": 1,
+      "raw": [
+        {
+          "intent": {
+            "type": "choice",
+            "choice": "feature",
+            "probabilities": {
+              "other": 0,
+              "refactor": 0,
+              "migration": 0,
+              "feature": 1,
+              "review": 0,
+              "test_generation": 0,
+              "bug_fix": 0
+            },
+            "confidence": 1
+          },
+          "complexity": {
+            "type": "score",
+            "score": 2.9,
+            "legend": {
+              "0": "Trivial edit",
+              "1": "Localized change",
+              "2": "Moderate multi-file change",
+              "3": "Cross-module change",
+              "4": "Architectural or highly coupled change"
+            },
+            "probabilities": {
+              "0": 0,
+              "1": 0,
+              "2": 0.13,
+              "3": 0.83,
+              "4": 0.04
+            },
+            "confidence": 0.86
+          },
+          "risk": {
+            "type": "choice",
+            "choice": "medium",
+            "probabilities": {
+              "medium": 0.96,
+              "high": 0,
+              "critical": 0,
+              "low": 0.04
+            },
+            "confidence": 0.94
+          },
+          "needs_repository_tools": {
+            "type": "noul",
+            "noul": 0.82
+          },
+          "needs_agentic_workflow": {
+            "type": "noul",
+            "noul": 0.87
+          },
+          "needs_long_context": {
+            "type": "noul",
+            "noul": 0.8
+          },
+          "requirements_ambiguous": {
+            "type": "noul",
+            "noul": 0.59
+          },
+          "security_sensitive": {
+            "type": "noul",
+            "noul": 0.28
+          },
+          "tests_executable": {
+            "type": "noul",
+            "noul": 0.72
+          }
+        }
+      ]
+    },
+    {
+      "id": "C19",
+      "item": {
+        "id": "C19",
+        "lang": "Python · Message queue",
+        "query": "Fix event consumers applying updates out of order when delayed messages arrive after newer versions.",
+        "intent": "bug_fix",
+        "complexity": 4,
+        "risk": "high"
+      },
+      "modelKey": "jev",
+      "modelLabel": "Jev 1.13",
+      "servedModel": "typesafe/jev-1.13-20260917",
+      "intent": "bug_fix",
+      "risk": "medium",
+      "complexity": 2.76,
+      "signals": {
+        "needs_repository_tools": 0.84,
+        "needs_agentic_workflow": 0.82,
+        "needs_long_context": 0.64,
+        "requirements_ambiguous": 0.6,
+        "security_sensitive": 0.31,
+        "tests_executable": 0.79
+      },
+      "latency": 507.20000000298023,
+      "cost": 0.000032676,
+      "runs": 1,
+      "raw": [
+        {
+          "intent": {
+            "type": "choice",
+            "choice": "bug_fix",
+            "probabilities": {
+              "migration": 0,
+              "other": 0,
+              "test_generation": 0,
+              "bug_fix": 1,
+              "review": 0,
+              "refactor": 0,
+              "feature": 0
+            },
+            "confidence": 1
+          },
+          "complexity": {
+            "type": "score",
+            "score": 2.76,
+            "legend": {
+              "0": "Trivial edit",
+              "1": "Localized change",
+              "2": "Moderate multi-file change",
+              "3": "Cross-module change",
+              "4": "Architectural or highly coupled change"
+            },
+            "probabilities": {
+              "0": 0,
+              "1": 0.04,
+              "2": 0.25,
+              "3": 0.62,
+              "4": 0.09
+            },
+            "confidence": 0.65
+          },
+          "risk": {
+            "type": "choice",
+            "choice": "medium",
+            "probabilities": {
+              "low": 0,
+              "medium": 0.87,
+              "critical": 0.02,
+              "high": 0.11
+            },
+            "confidence": 0.83
+          },
+          "needs_repository_tools": {
+            "type": "noul",
+            "noul": 0.84
+          },
+          "needs_agentic_workflow": {
+            "type": "noul",
+            "noul": 0.82
+          },
+          "needs_long_context": {
+            "type": "noul",
+            "noul": 0.64
+          },
+          "requirements_ambiguous": {
+            "type": "noul",
+            "noul": 0.6
+          },
+          "security_sensitive": {
+            "type": "noul",
+            "noul": 0.31
+          },
+          "tests_executable": {
+            "type": "noul",
+            "noul": 0.79
+          }
+        }
+      ]
+    },
+    {
+      "id": "C20",
+      "item": {
+        "id": "C20",
+        "lang": "Python · Airflow",
+        "query": "Extract repeated task-group creation from twelve DAGs into a shared builder without changing dependencies or schedules.",
+        "intent": "refactor",
+        "complexity": 4,
+        "risk": "high"
+      },
+      "modelKey": "jev",
+      "modelLabel": "Jev 1.13",
+      "servedModel": "typesafe/jev-1.13-20260917",
+      "intent": "refactor",
+      "risk": "medium",
+      "complexity": 2.54,
+      "signals": {
+        "needs_repository_tools": 0.92,
+        "needs_agentic_workflow": 0.88,
+        "needs_long_context": 0.92,
+        "requirements_ambiguous": 0.54,
+        "security_sensitive": 0.06,
+        "tests_executable": 0.75
+      },
+      "latency": 323.20000000298023,
+      "cost": 0.000032802,
+      "runs": 1,
+      "raw": [
+        {
+          "intent": {
+            "type": "choice",
+            "choice": "refactor",
+            "probabilities": {
+              "review": 0,
+              "other": 0,
+              "test_generation": 0,
+              "bug_fix": 0,
+              "refactor": 1,
+              "feature": 0,
+              "migration": 0
+            },
+            "confidence": 1
+          },
+          "complexity": {
+            "type": "score",
+            "score": 2.54,
+            "legend": {
+              "0": "Trivial edit",
+              "1": "Localized change",
+              "2": "Moderate multi-file change",
+              "3": "Cross-module change",
+              "4": "Architectural or highly coupled change"
+            },
+            "probabilities": {
+              "0": 0,
+              "1": 0,
+              "2": 0.52,
+              "3": 0.42,
+              "4": 0.06
+            },
+            "confidence": 0.54
+          },
+          "risk": {
+            "type": "choice",
+            "choice": "medium",
+            "probabilities": {
+              "critical": 0,
+              "low": 0.14,
+              "high": 0.08,
+              "medium": 0.78
+            },
+            "confidence": 0.71
+          },
+          "needs_repository_tools": {
+            "type": "noul",
+            "noul": 0.92
+          },
+          "needs_agentic_workflow": {
+            "type": "noul",
+            "noul": 0.88
+          },
+          "needs_long_context": {
+            "type": "noul",
+            "noul": 0.92
+          },
+          "requirements_ambiguous": {
+            "type": "noul",
+            "noul": 0.54
+          },
+          "security_sensitive": {
+            "type": "noul",
+            "noul": 0.06
+          },
+          "tests_executable": {
+            "type": "noul",
+            "noul": 0.75
+          }
+        }
+      ]
+    },
+    {
+      "id": "C01",
+      "item": {
+        "id": "C01",
+        "lang": "TypeScript · React",
+        "query": "Fix the product table skipping the final page when the item count is an exact multiple of the page size.",
+        "intent": "bug_fix",
+        "complexity": 2,
+        "risk": "low"
+      },
+      "modelKey": "qwen",
+      "modelLabel": "Qwen3 30B A3B",
+      "servedModel": "qwen/qwen3-30b-a3b-instruct-2507",
+      "intent": "bug_fix",
+      "risk": "low",
+      "complexity": 2,
+      "signals": {
+        "needs_repository_tools": 0,
+        "needs_agentic_workflow": 0,
+        "needs_long_context": 0,
+        "requirements_ambiguous": 0,
+        "security_sensitive": 0,
+        "tests_executable": 1
+      },
+      "latency": 5003.39999999851,
+      "cost": 0.00003855,
+      "runs": 1,
+      "raw": [
+        {
+          "intent": {
+            "type": "choice",
+            "choice": "bug_fix"
+          },
+          "complexity": {
+            "type": "score",
+            "score": 2
+          },
+          "risk": {
+            "type": "choice",
+            "choice": "low"
+          },
+          "needs_repository_tools": {
+            "type": "noul",
+            "noul": 0
+          },
+          "needs_agentic_workflow": {
+            "type": "noul",
+            "noul": 0
+          },
+          "needs_long_context": {
+            "type": "noul",
+            "noul": 0
+          },
+          "requirements_ambiguous": {
+            "type": "noul",
+            "noul": 0
+          },
+          "security_sensitive": {
+            "type": "noul",
+            "noul": 0
+          },
+          "tests_executable": {
+            "type": "noul",
+            "noul": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "C02",
+      "item": {
+        "id": "C02",
+        "lang": "Python · FastAPI",
+        "query": "Add asynchronous webhook delivery with exponential backoff, a maximum retry count, and delivery-status tracking.",
+        "intent": "feature",
+        "complexity": 3,
+        "risk": "medium"
+      },
+      "modelKey": "qwen",
+      "modelLabel": "Qwen3 30B A3B",
+      "servedModel": "qwen/qwen3-30b-a3b-instruct-2507",
+      "intent": "feature",
+      "risk": "medium",
+      "complexity": 3,
+      "signals": {
+        "needs_repository_tools": 0,
+        "needs_agentic_workflow": 1,
+        "needs_long_context": 0,
+        "requirements_ambiguous": 0,
+        "security_sensitive": 0,
+        "tests_executable": 1
+      },
+      "latency": 6791.39999999851,
+      "cost": 0.00002440575,
+      "runs": 1,
+      "raw": [
+        {
+          "intent": {
+            "type": "choice",
+            "choice": "feature"
+          },
+          "complexity": {
+            "type": "score",
+            "score": 3
+          },
+          "risk": {
+            "type": "choice",
+            "choice": "medium"
+          },
+          "needs_repository_tools": {
+            "type": "noul",
+            "noul": 0
+          },
+          "needs_agentic_workflow": {
+            "type": "noul",
+            "noul": 1
+          },
+          "needs_long_context": {
+            "type": "noul",
+            "noul": 0
+          },
+          "requirements_ambiguous": {
+            "type": "noul",
+            "noul": 0
+          },
+          "security_sensitive": {
+            "type": "noul",
+            "noul": 0
+          },
+          "tests_executable": {
+            "type": "noul",
+            "noul": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "C03",
+      "item": {
+        "id": "C03",
+        "lang": "Java · Spring Boot",
+        "query": "Merge three duplicated configuration loaders into one typed component without changing precedence rules.",
+        "intent": "refactor",
+        "complexity": 3,
+        "risk": "low"
+      },
+      "modelKey": "qwen",
+      "modelLabel": "Qwen3 30B A3B",
+      "servedModel": "qwen/qwen3-30b-a3b-instruct-2507",
+      "intent": "refactor",
+      "risk": "low",
+      "complexity": 2,
+      "signals": {
+        "needs_repository_tools": 0,
+        "needs_agentic_workflow": 0,
+        "needs_long_context": 0,
+        "requirements_ambiguous": 0,
+        "security_sensitive": 0,
+        "tests_executable": 0
+      },
+      "latency": 4716.79999999702,
+      "cost": 0.00003831,
+      "runs": 1,
+      "raw": [
+        {
+          "intent": {
+            "type": "choice",
+            "choice": "refactor"
+          },
+          "complexity": {
+            "type": "score",
+            "score": 2
+          },
+          "risk": {
+            "type": "choice",
+            "choice": "low"
+          },
+          "needs_repository_tools": {
+            "type": "noul",
+            "noul": 0
+          },
+          "needs_agentic_workflow": {
+            "type": "noul",
+            "noul": 0
+          },
+          "needs_long_context": {
+            "type": "noul",
+            "noul": 0
+          },
+          "requirements_ambiguous": {
+            "type": "noul",
+            "noul": 0
+          },
+          "security_sensitive": {
+            "type": "noul",
+            "noul": 0
+          },
+          "tests_executable": {
+            "type": "noul",
+            "noul": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "C04",
+      "item": {
+        "id": "C04",
+        "lang": "Rust · Parser",
+        "query": "Write unit tests for the configuration parser covering comments, escaped values, empty sections, and malformed headers.",
+        "intent": "test_generation",
+        "complexity": 2,
+        "risk": "low"
+      },
+      "modelKey": "qwen",
+      "modelLabel": "Qwen3 30B A3B",
+      "servedModel": "qwen/qwen3-30b-a3b-instruct-2507",
+      "intent": "test_generation",
+      "risk": "low",
+      "complexity": 2,
+      "signals": {
+        "needs_repository_tools": 0,
+        "needs_agentic_workflow": 0,
+        "needs_long_context": 0,
+        "requirements_ambiguous": 0,
+        "security_sensitive": 0,
+        "tests_executable": 1
+      },
+      "latency": 3041.10000000149,
+      "cost": 0.0000392,
+      "runs": 1,
+      "raw": [
+        {
+          "intent": {
+            "type": "choice",
+            "choice": "test_generation"
+          },
+          "complexity": {
+            "type": "score",
+            "score": 2
+          },
+          "risk": {
+            "type": "choice",
+            "choice": "low"
+          },
+          "needs_repository_tools": {
+            "type": "noul",
+            "noul": 0
+          },
+          "needs_agentic_workflow": {
+            "type": "noul",
+            "noul": 0
+          },
+          "needs_long_context": {
+            "type": "noul",
+            "noul": 0
+          },
+          "requirements_ambiguous": {
+            "type": "noul",
+            "noul": 0
+          },
+          "security_sensitive": {
+            "type": "noul",
+            "noul": 0
+          },
+          "tests_executable": {
+            "type": "noul",
+            "noul": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "C05",
+      "item": {
+        "id": "C05",
+        "lang": "Vue 2 → Vue 3",
+        "query": "Migrate the account settings screen to Vue 3 Composition API while preserving validation and analytics events.",
+        "intent": "migration",
+        "complexity": 4,
+        "risk": "medium"
+      },
+      "modelKey": "qwen",
+      "modelLabel": "Qwen3 30B A3B",
+      "servedModel": "qwen/qwen3-30b-a3b-instruct-2507",
+      "intent": "migration",
+      "risk": "low",
+      "complexity": 2,
+      "signals": {
+        "needs_repository_tools": 0,
+        "needs_agentic_workflow": 0,
+        "needs_long_context": 0,
+        "requirements_ambiguous": 0,
+        "security_sensitive": 0,
+        "tests_executable": 1
+      },
+      "latency": 2298,
+      "cost": 0.0000245502,
+      "runs": 1,
+      "raw": [
+        {
+          "intent": {
+            "type": "choice",
+            "choice": "migration"
+          },
+          "complexity": {
+            "type": "score",
+            "score": 2
+          },
+          "risk": {
+            "type": "choice",
+            "choice": "low"
+          },
+          "needs_repository_tools": {
+            "type": "noul",
+            "noul": 0
+          },
+          "needs_agentic_workflow": {
+            "type": "noul",
+            "noul": 0
+          },
+          "needs_long_context": {
+            "type": "noul",
+            "noul": 0
+          },
+          "requirements_ambiguous": {
+            "type": "noul",
+            "noul": 0
+          },
+          "security_sensitive": {
+            "type": "noul",
+            "noul": 0
+          },
+          "tests_executable": {
+            "type": "noul",
+            "noul": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "C06",
+      "item": {
+        "id": "C06",
+        "lang": "SQL · PostgreSQL",
+        "query": "Review this slow reporting query and determine whether the proposed composite index matches its filters and sort order.",
+        "intent": "review",
+        "complexity": 2,
+        "risk": "low"
+      },
+      "modelKey": "qwen",
+      "modelLabel": "Qwen3 30B A3B",
+      "servedModel": "qwen/qwen3-30b-a3b-instruct-2507",
+      "intent": "test_generation",
+      "risk": "low",
+      "complexity": 2,
+      "signals": {
+        "needs_repository_tools": 0,
+        "needs_agentic_workflow": 0,
+        "needs_long_context": 0,
+        "requirements_ambiguous": 0,
+        "security_sensitive": 0,
+        "tests_executable": 0
+      },
+      "latency": 5333.29999999702,
+      "cost": 0.00004107,
+      "runs": 1,
+      "raw": [
+        {
+          "intent": {
+            "type": "choice",
+            "choice": "test_generation"
+          },
+          "complexity": {
+            "type": "score",
+            "score": 2
+          },
+          "risk": {
+            "type": "choice",
+            "choice": "low"
+          },
+          "needs_repository_tools": {
+            "type": "noul",
+            "noul": 0
+          },
+          "needs_agentic_workflow": {
+            "type": "noul",
+            "noul": 0
+          },
+          "needs_long_context": {
+            "type": "noul",
+            "noul": 0
+          },
+          "requirements_ambiguous": {
+            "type": "noul",
+            "noul": 0
+          },
+          "security_sensitive": {
+            "type": "noul",
+            "noul": 0
+          },
+          "tests_executable": {
+            "type": "noul",
+            "noul": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "C07",
+      "item": {
+        "id": "C07",
+        "lang": "Java · Scheduling",
+        "query": "Fix recurring meetings shifting by one hour after daylight-saving transitions for users in multiple time zones.",
+        "intent": "bug_fix",
+        "complexity": 3,
+        "risk": "medium"
+      },
+      "modelKey": "qwen",
+      "modelLabel": "Qwen3 30B A3B",
+      "servedModel": "qwen/qwen3-30b-a3b-instruct-2507",
+      "intent": "bug_fix",
+      "risk": "medium",
+      "complexity": 3,
+      "signals": {
+        "needs_repository_tools": 0,
+        "needs_agentic_workflow": 0,
+        "needs_long_context": 0,
+        "requirements_ambiguous": 0,
+        "security_sensitive": 0,
+        "tests_executable": 0
+      },
+      "latency": 1427.2999999970198,
+      "cost": 0.0000251298,
+      "runs": 1,
+      "raw": [
+        {
+          "intent": {
+            "type": "choice",
+            "choice": "bug_fix"
+          },
+          "complexity": {
+            "type": "score",
+            "score": 3
+          },
+          "risk": {
+            "type": "choice",
+            "choice": "medium"
+          },
+          "needs_repository_tools": {
+            "type": "noul",
+            "noul": 0
+          },
+          "needs_agentic_workflow": {
+            "type": "noul",
+            "noul": 0
+          },
+          "needs_long_context": {
+            "type": "noul",
+            "noul": 0
+          },
+          "requirements_ambiguous": {
+            "type": "noul",
+            "noul": 0
+          },
+          "security_sensitive": {
+            "type": "noul",
+            "noul": 0
+          },
+          "tests_executable": {
+            "type": "noul",
+            "noul": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "C08",
+      "item": {
+        "id": "C08",
+        "lang": "C# · ASP.NET",
+        "query": "Add CSV export to the inventory search endpoint using the existing filters and a configurable row limit.",
+        "intent": "feature",
+        "complexity": 2,
+        "risk": "low"
+      },
+      "modelKey": "qwen",
+      "modelLabel": "Qwen3 30B A3B",
+      "servedModel": "qwen/qwen3-30b-a3b-instruct-2507",
+      "intent": "feature",
+      "risk": "low",
+      "complexity": 2,
+      "signals": {
+        "needs_repository_tools": 0,
+        "needs_agentic_workflow": 0,
+        "needs_long_context": 0,
+        "requirements_ambiguous": 0,
+        "security_sensitive": 0,
+        "tests_executable": 1
+      },
+      "latency": 1381.1000000014901,
+      "cost": 0.00002401965,
+      "runs": 1,
+      "raw": [
+        {
+          "intent": {
+            "type": "choice",
+            "choice": "feature"
+          },
+          "complexity": {
+            "type": "score",
+            "score": 2
+          },
+          "risk": {
+            "type": "choice",
+            "choice": "low"
+          },
+          "needs_repository_tools": {
+            "type": "noul",
+            "noul": 0
+          },
+          "needs_agentic_workflow": {
+            "type": "noul",
+            "noul": 0
+          },
+          "needs_long_context": {
+            "type": "noul",
+            "noul": 0
+          },
+          "requirements_ambiguous": {
+            "type": "noul",
+            "noul": 0
+          },
+          "security_sensitive": {
+            "type": "noul",
+            "noul": 0
+          },
+          "tests_executable": {
+            "type": "noul",
+            "noul": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "C09",
+      "item": {
+        "id": "C09",
+        "lang": "Python · Machine learning",
+        "query": "Review the training pipeline for target leakage caused by features calculated after the prediction timestamp.",
+        "intent": "review",
+        "complexity": 4,
+        "risk": "high"
+      },
+      "modelKey": "qwen",
+      "modelLabel": "Qwen3 30B A3B",
+      "servedModel": "qwen/qwen3-30b-a3b-instruct-2507",
+      "intent": "review",
+      "risk": "high",
+      "complexity": 3,
+      "signals": {
+        "needs_repository_tools": 0,
+        "needs_agentic_workflow": 0,
+        "needs_long_context": 1,
+        "requirements_ambiguous": 0,
+        "security_sensitive": 1,
+        "tests_executable": 0
+      },
+      "latency": 1306.4000000059605,
+      "cost": 0.0000234891,
+      "runs": 1,
+      "raw": [
+        {
+          "intent": {
+            "type": "choice",
+            "choice": "review"
+          },
+          "complexity": {
+            "type": "score",
+            "score": 3
+          },
+          "risk": {
+            "type": "choice",
+            "choice": "high"
+          },
+          "needs_repository_tools": {
+            "type": "noul",
+            "noul": 0
+          },
+          "needs_agentic_workflow": {
+            "type": "noul",
+            "noul": 0
+          },
+          "needs_long_context": {
+            "type": "noul",
+            "noul": 1
+          },
+          "requirements_ambiguous": {
+            "type": "noul",
+            "noul": 0
+          },
+          "security_sensitive": {
+            "type": "noul",
+            "noul": 1
+          },
+          "tests_executable": {
+            "type": "noul",
+            "noul": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "C10",
+      "item": {
+        "id": "C10",
+        "lang": "Kotlin · HTTP client",
+        "query": "Create integration tests for retry behavior on timeouts, HTTP 429 responses, and successful recovery.",
+        "intent": "test_generation",
+        "complexity": 3,
+        "risk": "medium"
+      },
+      "modelKey": "qwen",
+      "modelLabel": "Qwen3 30B A3B",
+      "servedModel": "qwen/qwen3-30b-a3b-instruct-2507",
+      "intent": "test_generation",
+      "risk": "low",
+      "complexity": 2,
+      "signals": {
+        "needs_repository_tools": 0,
+        "needs_agentic_workflow": 0,
+        "needs_long_context": 0,
+        "requirements_ambiguous": 0,
+        "security_sensitive": 0,
+        "tests_executable": 1
+      },
+      "latency": 2402,
+      "cost": 0.0000240678,
+      "runs": 1,
+      "raw": [
+        {
+          "intent": {
+            "type": "choice",
+            "choice": "test_generation"
+          },
+          "complexity": {
+            "type": "score",
+            "score": 2
+          },
+          "risk": {
+            "type": "choice",
+            "choice": "low"
+          },
+          "needs_repository_tools": {
+            "type": "noul",
+            "noul": 0
+          },
+          "needs_agentic_workflow": {
+            "type": "noul",
+            "noul": 0
+          },
+          "needs_long_context": {
+            "type": "noul",
+            "noul": 0
+          },
+          "requirements_ambiguous": {
+            "type": "noul",
+            "noul": 0
+          },
+          "security_sensitive": {
+            "type": "noul",
+            "noul": 0
+          },
+          "tests_executable": {
+            "type": "noul",
+            "noul": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "C11",
+      "item": {
+        "id": "C11",
+        "lang": "MySQL 5.7 → 8.0",
+        "query": "Upgrade the application database to MySQL 8, update incompatible SQL modes, and verify existing replication jobs.",
+        "intent": "migration",
+        "complexity": 4,
+        "risk": "high"
+      },
+      "modelKey": "qwen",
+      "modelLabel": "Qwen3 30B A3B",
+      "servedModel": "qwen/qwen3-30b-a3b-instruct-2507",
+      "intent": "migration",
+      "risk": "critical",
+      "complexity": 4,
+      "signals": {
+        "needs_repository_tools": 0,
+        "needs_agentic_workflow": 1,
+        "needs_long_context": 1,
+        "requirements_ambiguous": 0,
+        "security_sensitive": 1,
+        "tests_executable": 1
+      },
+      "latency": 1093.4000000059605,
+      "cost": 0.0000251289,
+      "runs": 1,
+      "raw": [
+        {
+          "intent": {
+            "type": "choice",
+            "choice": "migration"
+          },
+          "complexity": {
+            "type": "score",
+            "score": 4
+          },
+          "risk": {
+            "type": "choice",
+            "choice": "critical"
+          },
+          "needs_repository_tools": {
+            "type": "noul",
+            "noul": 0
+          },
+          "needs_agentic_workflow": {
+            "type": "noul",
+            "noul": 1
+          },
+          "needs_long_context": {
+            "type": "noul",
+            "noul": 1
+          },
+          "requirements_ambiguous": {
+            "type": "noul",
+            "noul": 0
+          },
+          "security_sensitive": {
+            "type": "noul",
+            "noul": 1
+          },
+          "tests_executable": {
+            "type": "noul",
+            "noul": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "C12",
+      "item": {
+        "id": "C12",
+        "lang": "C# · Logging",
+        "query": "Replace ad-hoc string logging in six services with structured event templates while preserving log levels.",
+        "intent": "refactor",
+        "complexity": 2,
+        "risk": "medium"
+      },
+      "modelKey": "qwen",
+      "modelLabel": "Qwen3 30B A3B",
+      "servedModel": "qwen/qwen3-30b-a3b-instruct-2507",
+      "intent": "refactor",
+      "risk": "low",
+      "complexity": 3,
+      "signals": {
+        "needs_repository_tools": 0,
+        "needs_agentic_workflow": 0,
+        "needs_long_context": 0,
+        "requirements_ambiguous": 0,
+        "security_sensitive": 0,
+        "tests_executable": 1
+      },
+      "latency": 1439.1999999955297,
+      "cost": 0.0000247437,
+      "runs": 1,
+      "raw": [
+        {
+          "intent": {
+            "type": "choice",
+            "choice": "refactor"
+          },
+          "complexity": {
+            "type": "score",
+            "score": 3
+          },
+          "risk": {
+            "type": "choice",
+            "choice": "low"
+          },
+          "needs_repository_tools": {
+            "type": "noul",
+            "noul": 0
+          },
+          "needs_agentic_workflow": {
+            "type": "noul",
+            "noul": 0
+          },
+          "needs_long_context": {
+            "type": "noul",
+            "noul": 0
+          },
+          "requirements_ambiguous": {
+            "type": "noul",
+            "noul": 0
+          },
+          "security_sensitive": {
+            "type": "noul",
+            "noul": 0
+          },
+          "tests_executable": {
+            "type": "noul",
+            "noul": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "C13",
+      "item": {
+        "id": "C13",
+        "lang": "Node.js · Redis",
+        "query": "Fix user profile updates remaining stale because cache invalidation runs before the database transaction commits.",
+        "intent": "bug_fix",
+        "complexity": 3,
+        "risk": "medium"
+      },
+      "modelKey": "qwen",
+      "modelLabel": "Qwen3 30B A3B",
+      "servedModel": "qwen/qwen3-30b-a3b-instruct-2507",
+      "intent": "bug_fix",
+      "risk": "medium",
+      "complexity": 2,
+      "signals": {
+        "needs_repository_tools": 0,
+        "needs_agentic_workflow": 0,
+        "needs_long_context": 0,
+        "requirements_ambiguous": 0,
+        "security_sensitive": 0,
+        "tests_executable": 1
+      },
+      "latency": 4128.80000000447,
+      "cost": 0.0000399,
+      "runs": 1,
+      "raw": [
+        {
+          "intent": {
+            "type": "choice",
+            "choice": "bug_fix"
+          },
+          "complexity": {
+            "type": "score",
+            "score": 2
+          },
+          "risk": {
+            "type": "choice",
+            "choice": "medium"
+          },
+          "needs_repository_tools": {
+            "type": "noul",
+            "noul": 0
+          },
+          "needs_agentic_workflow": {
+            "type": "noul",
+            "noul": 0
+          },
+          "needs_long_context": {
+            "type": "noul",
+            "noul": 0
+          },
+          "requirements_ambiguous": {
+            "type": "noul",
+            "noul": 0
+          },
+          "security_sensitive": {
+            "type": "noul",
+            "noul": 0
+          },
+          "tests_executable": {
+            "type": "noul",
+            "noul": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "C14",
+      "item": {
+        "id": "C14",
+        "lang": "Go · Feature flags",
+        "query": "Add percentage-based feature rollout with stable user bucketing, team overrides, and an emergency disable switch.",
+        "intent": "feature",
+        "complexity": 4,
+        "risk": "medium"
+      },
+      "modelKey": "qwen",
+      "modelLabel": "Qwen3 30B A3B",
+      "servedModel": "qwen/qwen3-30b-a3b-instruct-2507",
+      "intent": "feature",
+      "risk": "medium",
+      "complexity": 3,
+      "signals": {
+        "needs_repository_tools": 0,
+        "needs_agentic_workflow": 0,
+        "needs_long_context": 0,
+        "requirements_ambiguous": 0,
+        "security_sensitive": 0,
+        "tests_executable": 0
+      },
+      "latency": 2932.7999999970198,
+      "cost": 0.00002387475,
+      "runs": 1,
+      "raw": [
+        {
+          "intent": {
+            "type": "choice",
+            "choice": "feature"
+          },
+          "complexity": {
+            "type": "score",
+            "score": 3
+          },
+          "risk": {
+            "type": "choice",
+            "choice": "medium"
+          },
+          "needs_repository_tools": {
+            "type": "noul",
+            "noul": 0
+          },
+          "needs_agentic_workflow": {
+            "type": "noul",
+            "noul": 0
+          },
+          "needs_long_context": {
+            "type": "noul",
+            "noul": 0
+          },
+          "requirements_ambiguous": {
+            "type": "noul",
+            "noul": 0
+          },
+          "security_sensitive": {
+            "type": "noul",
+            "noul": 0
+          },
+          "tests_executable": {
+            "type": "noul",
+            "noul": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "C15",
+      "item": {
+        "id": "C15",
+        "lang": "Terraform · Azure",
+        "query": "Add automated tests for a network module covering optional subnets, custom DNS, and invalid address ranges.",
+        "intent": "test_generation",
+        "complexity": 3,
+        "risk": "medium"
+      },
+      "modelKey": "qwen",
+      "modelLabel": "Qwen3 30B A3B",
+      "servedModel": "qwen/qwen3-30b-a3b-instruct-2507",
+      "intent": "test_generation",
+      "risk": "low",
+      "complexity": 2,
+      "signals": {
+        "needs_repository_tools": 0,
+        "needs_agentic_workflow": 0,
+        "needs_long_context": 0,
+        "requirements_ambiguous": 0,
+        "security_sensitive": 0,
+        "tests_executable": 1
+      },
+      "latency": 3294.8000000044703,
+      "cost": 0.00003945,
+      "runs": 1,
+      "raw": [
+        {
+          "intent": {
+            "type": "choice",
+            "choice": "test_generation"
+          },
+          "complexity": {
+            "type": "score",
+            "score": 2
+          },
+          "risk": {
+            "type": "choice",
+            "choice": "low"
+          },
+          "needs_repository_tools": {
+            "type": "noul",
+            "noul": 0
+          },
+          "needs_agentic_workflow": {
+            "type": "noul",
+            "noul": 0
+          },
+          "needs_long_context": {
+            "type": "noul",
+            "noul": 0
+          },
+          "requirements_ambiguous": {
+            "type": "noul",
+            "noul": 0
+          },
+          "security_sensitive": {
+            "type": "noul",
+            "noul": 0
+          },
+          "tests_executable": {
+            "type": "noul",
+            "noul": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "C16",
+      "item": {
+        "id": "C16",
+        "lang": "TypeScript · Monorepo",
+        "query": "Review the dependency graph and identify packages that violate the rule that UI modules cannot import data-access implementations.",
+        "intent": "review",
+        "complexity": 3,
+        "risk": "low"
+      },
+      "modelKey": "qwen",
+      "modelLabel": "Qwen3 30B A3B",
+      "servedModel": "qwen/qwen3-30b-a3b-instruct-2507",
+      "intent": "review",
+      "risk": "medium",
+      "complexity": 3,
+      "signals": {
+        "needs_repository_tools": 1,
+        "needs_agentic_workflow": 0,
+        "needs_long_context": 0,
+        "requirements_ambiguous": 0,
+        "security_sensitive": 0,
+        "tests_executable": 0
+      },
+      "latency": 2776.2999999970198,
+      "cost": 0.0000385,
+      "runs": 1,
+      "raw": [
+        {
+          "intent": {
+            "type": "choice",
+            "choice": "review"
+          },
+          "complexity": {
+            "type": "score",
+            "score": 3
+          },
+          "risk": {
+            "type": "choice",
+            "choice": "medium"
+          },
+          "needs_repository_tools": {
+            "type": "noul",
+            "noul": 1
+          },
+          "needs_agentic_workflow": {
+            "type": "noul",
+            "noul": 0
+          },
+          "needs_long_context": {
+            "type": "noul",
+            "noul": 0
+          },
+          "requirements_ambiguous": {
+            "type": "noul",
+            "noul": 0
+          },
+          "security_sensitive": {
+            "type": "noul",
+            "noul": 0
+          },
+          "tests_executable": {
+            "type": "noul",
+            "noul": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "C17",
+      "item": {
+        "id": "C17",
+        "lang": "Pandas → Polars",
+        "query": "Migrate a daily aggregation pipeline from Pandas to Polars while preserving null handling and output column order.",
+        "intent": "migration",
+        "complexity": 3,
+        "risk": "medium"
+      },
+      "modelKey": "qwen",
+      "modelLabel": "Qwen3 30B A3B",
+      "servedModel": "qwen/qwen3-30b-a3b-instruct-2507",
+      "intent": "migration",
+      "risk": "medium",
+      "complexity": 3,
+      "signals": {
+        "needs_repository_tools": 0,
+        "needs_agentic_workflow": 0,
+        "needs_long_context": 0,
+        "requirements_ambiguous": 0,
+        "security_sensitive": 0,
+        "tests_executable": 1
+      },
+      "latency": 1831.6999999955297,
+      "cost": 0.00002281275,
+      "runs": 1,
+      "raw": [
+        {
+          "intent": {
+            "type": "choice",
+            "choice": "migration"
+          },
+          "complexity": {
+            "type": "score",
+            "score": 3
+          },
+          "risk": {
+            "type": "choice",
+            "choice": "medium"
+          },
+          "needs_repository_tools": {
+            "type": "noul",
+            "noul": 0
+          },
+          "needs_agentic_workflow": {
+            "type": "noul",
+            "noul": 0
+          },
+          "needs_long_context": {
+            "type": "noul",
+            "noul": 0
+          },
+          "requirements_ambiguous": {
+            "type": "noul",
+            "noul": 0
+          },
+          "security_sensitive": {
+            "type": "noul",
+            "noul": 0
+          },
+          "tests_executable": {
+            "type": "noul",
+            "noul": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "C18",
+      "item": {
+        "id": "C18",
+        "lang": "Swift · iOS",
+        "query": "Add offline search over downloaded articles with prefix matching and automatic index refresh after synchronization.",
+        "intent": "feature",
+        "complexity": 3,
+        "risk": "medium"
+      },
+      "modelKey": "qwen",
+      "modelLabel": "Qwen3 30B A3B",
+      "servedModel": "qwen/qwen3-30b-a3b-instruct-2507",
+      "intent": "feature",
+      "risk": "medium",
+      "complexity": 3,
+      "signals": {
+        "needs_repository_tools": 0,
+        "needs_agentic_workflow": 0,
+        "needs_long_context": 0,
+        "requirements_ambiguous": 0,
+        "security_sensitive": 0,
+        "tests_executable": 1
+      },
+      "latency": 1116,
+      "cost": 0.00002382705,
+      "runs": 1,
+      "raw": [
+        {
+          "intent": {
+            "type": "choice",
+            "choice": "feature"
+          },
+          "complexity": {
+            "type": "score",
+            "score": 3
+          },
+          "risk": {
+            "type": "choice",
+            "choice": "medium"
+          },
+          "needs_repository_tools": {
+            "type": "noul",
+            "noul": 0
+          },
+          "needs_agentic_workflow": {
+            "type": "noul",
+            "noul": 0
+          },
+          "needs_long_context": {
+            "type": "noul",
+            "noul": 0
+          },
+          "requirements_ambiguous": {
+            "type": "noul",
+            "noul": 0
+          },
+          "security_sensitive": {
+            "type": "noul",
+            "noul": 0
+          },
+          "tests_executable": {
+            "type": "noul",
+            "noul": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "C19",
+      "item": {
+        "id": "C19",
+        "lang": "Python · Message queue",
+        "query": "Fix event consumers applying updates out of order when delayed messages arrive after newer versions.",
+        "intent": "bug_fix",
+        "complexity": 4,
+        "risk": "high"
+      },
+      "modelKey": "qwen",
+      "modelLabel": "Qwen3 30B A3B",
+      "servedModel": "qwen/qwen3-30b-a3b-instruct-2507",
+      "intent": "bug_fix",
+      "risk": "high",
+      "complexity": 3,
+      "signals": {
+        "needs_repository_tools": 0,
+        "needs_agentic_workflow": 0,
+        "needs_long_context": 0,
+        "requirements_ambiguous": 0,
+        "security_sensitive": 1,
+        "tests_executable": 1
+      },
+      "latency": 3831.7000000029802,
+      "cost": 0.00004029,
+      "runs": 1,
+      "raw": [
+        {
+          "intent": {
+            "type": "choice",
+            "choice": "bug_fix"
+          },
+          "complexity": {
+            "type": "score",
+            "score": 3
+          },
+          "risk": {
+            "type": "choice",
+            "choice": "high"
+          },
+          "needs_repository_tools": {
+            "type": "noul",
+            "noul": 0
+          },
+          "needs_agentic_workflow": {
+            "type": "noul",
+            "noul": 0
+          },
+          "needs_long_context": {
+            "type": "noul",
+            "noul": 0
+          },
+          "requirements_ambiguous": {
+            "type": "noul",
+            "noul": 0
+          },
+          "security_sensitive": {
+            "type": "noul",
+            "noul": 1
+          },
+          "tests_executable": {
+            "type": "noul",
+            "noul": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "C20",
+      "item": {
+        "id": "C20",
+        "lang": "Python · Airflow",
+        "query": "Extract repeated task-group creation from twelve DAGs into a shared builder without changing dependencies or schedules.",
+        "intent": "refactor",
+        "complexity": 4,
+        "risk": "high"
+      },
+      "modelKey": "qwen",
+      "modelLabel": "Qwen3 30B A3B",
+      "servedModel": "qwen/qwen3-30b-a3b-instruct-2507",
+      "intent": "refactor",
+      "risk": "low",
+      "complexity": 3,
+      "signals": {
+        "needs_repository_tools": 0,
+        "needs_agentic_workflow": 0,
+        "needs_long_context": 0,
+        "requirements_ambiguous": 0,
+        "security_sensitive": 0,
+        "tests_executable": 1
+      },
+      "latency": 2671.5,
+      "cost": 0.0000389,
+      "runs": 1,
+      "raw": [
+        {
+          "intent": {
+            "type": "choice",
+            "choice": "refactor"
+          },
+          "complexity": {
+            "type": "score",
+            "score": 3
+          },
+          "risk": {
+            "type": "choice",
+            "choice": "low"
+          },
+          "needs_repository_tools": {
+            "type": "noul",
+            "noul": 0
+          },
+          "needs_agentic_workflow": {
+            "type": "noul",
+            "noul": 0
+          },
+          "needs_long_context": {
+            "type": "noul",
+            "noul": 0
+          },
+          "requirements_ambiguous": {
+            "type": "noul",
+            "noul": 0
+          },
+          "security_sensitive": {
+            "type": "noul",
+            "noul": 0
+          },
+          "tests_executable": {
+            "type": "noul",
+            "noul": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "C01",
+      "item": {
+        "id": "C01",
+        "lang": "TypeScript · React",
+        "query": "Fix the product table skipping the final page when the item count is an exact multiple of the page size.",
+        "intent": "bug_fix",
+        "complexity": 2,
+        "risk": "low"
+      },
+      "modelKey": "deepseek",
+      "modelLabel": "DeepSeek V4 Flash",
+      "servedModel": "deepseek/deepseek-v4-flash-0731",
+      "intent": "bug_fix",
+      "risk": "low",
+      "complexity": 2,
+      "signals": {
+        "needs_repository_tools": 0,
+        "needs_agentic_workflow": 0,
+        "needs_long_context": 0,
+        "requirements_ambiguous": 0,
+        "security_sensitive": 0,
+        "tests_executable": 0
+      },
+      "latency": 8916.39999999851,
+      "cost": 0.00016016,
+      "runs": 1,
+      "raw": [
+        {
+          "intent": {
+            "type": "choice",
+            "choice": "bug_fix"
+          },
+          "complexity": {
+            "type": "score",
+            "score": 2
+          },
+          "risk": {
+            "type": "choice",
+            "choice": "low"
+          },
+          "needs_repository_tools": {
+            "type": "noul",
+            "noul": 0
+          },
+          "needs_agentic_workflow": {
+            "type": "noul",
+            "noul": 0
+          },
+          "needs_long_context": {
+            "type": "noul",
+            "noul": 0
+          },
+          "requirements_ambiguous": {
+            "type": "noul",
+            "noul": 0
+          },
+          "security_sensitive": {
+            "type": "noul",
+            "noul": 0
+          },
+          "tests_executable": {
+            "type": "noul",
+            "noul": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "C02",
+      "item": {
+        "id": "C02",
+        "lang": "Python · FastAPI",
+        "query": "Add asynchronous webhook delivery with exponential backoff, a maximum retry count, and delivery-status tracking.",
+        "intent": "feature",
+        "complexity": 3,
+        "risk": "medium"
+      },
+      "modelKey": "deepseek",
+      "modelLabel": "DeepSeek V4 Flash",
+      "servedModel": "deepseek/deepseek-v4-flash-0731",
+      "intent": "feature",
+      "risk": "medium",
+      "complexity": 3,
+      "signals": {
+        "needs_repository_tools": 0,
+        "needs_agentic_workflow": 1,
+        "needs_long_context": 1,
+        "requirements_ambiguous": 0,
+        "security_sensitive": 0,
+        "tests_executable": 0
+      },
+      "latency": 4155.79999999702,
+      "cost": 0.0000992,
+      "runs": 1,
+      "raw": [
+        {
+          "intent": {
+            "type": "choice",
+            "choice": "feature"
+          },
+          "complexity": {
+            "type": "score",
+            "score": 3
+          },
+          "risk": {
+            "type": "choice",
+            "choice": "medium"
+          },
+          "needs_repository_tools": {
+            "type": "noul",
+            "noul": 0
+          },
+          "needs_agentic_workflow": {
+            "type": "noul",
+            "noul": 1
+          },
+          "needs_long_context": {
+            "type": "noul",
+            "noul": 1
+          },
+          "requirements_ambiguous": {
+            "type": "noul",
+            "noul": 0
+          },
+          "security_sensitive": {
+            "type": "noul",
+            "noul": 0
+          },
+          "tests_executable": {
+            "type": "noul",
+            "noul": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "C03",
+      "item": {
+        "id": "C03",
+        "lang": "Java · Spring Boot",
+        "query": "Merge three duplicated configuration loaders into one typed component without changing precedence rules.",
+        "intent": "refactor",
+        "complexity": 3,
+        "risk": "low"
+      },
+      "modelKey": "deepseek",
+      "modelLabel": "DeepSeek V4 Flash",
+      "servedModel": "deepseek/deepseek-v4-flash-0731",
+      "intent": "refactor",
+      "risk": "medium",
+      "complexity": 3,
+      "signals": {
+        "needs_repository_tools": 1,
+        "needs_agentic_workflow": 1,
+        "needs_long_context": 0,
+        "requirements_ambiguous": 0,
+        "security_sensitive": 0,
+        "tests_executable": 1
+      },
+      "latency": 75319.79999999702,
+      "cost": 0.00160827,
+      "runs": 1,
+      "raw": [
+        {
+          "intent": {
+            "type": "choice",
+            "choice": "refactor"
+          },
+          "complexity": {
+            "type": "score",
+            "score": 3
+          },
+          "risk": {
+            "type": "choice",
+            "choice": "medium"
+          },
+          "needs_repository_tools": {
+            "type": "noul",
+            "noul": 1
+          },
+          "needs_agentic_workflow": {
+            "type": "noul",
+            "noul": 1
+          },
+          "needs_long_context": {
+            "type": "noul",
+            "noul": 0
+          },
+          "requirements_ambiguous": {
+            "type": "noul",
+            "noul": 0
+          },
+          "security_sensitive": {
+            "type": "noul",
+            "noul": 0
+          },
+          "tests_executable": {
+            "type": "noul",
+            "noul": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "C04",
+      "item": {
+        "id": "C04",
+        "lang": "Rust · Parser",
+        "query": "Write unit tests for the configuration parser covering comments, escaped values, empty sections, and malformed headers.",
+        "intent": "test_generation",
+        "complexity": 2,
+        "risk": "low"
+      },
+      "modelKey": "deepseek",
+      "modelLabel": "DeepSeek V4 Flash",
+      "servedModel": "deepseek/deepseek-v4-flash-0731",
+      "intent": "test_generation",
+      "risk": "low",
+      "complexity": 2,
+      "signals": {
+        "needs_repository_tools": 1,
+        "needs_agentic_workflow": 0,
+        "needs_long_context": 0,
+        "requirements_ambiguous": 0,
+        "security_sensitive": 0,
+        "tests_executable": 1
+      },
+      "latency": 13365.70000000298,
+      "cost": 0.000191148,
+      "runs": 1,
+      "raw": [
+        {
+          "intent": {
+            "type": "choice",
+            "choice": "test_generation"
+          },
+          "complexity": {
+            "type": "score",
+            "score": 2
+          },
+          "risk": {
+            "type": "choice",
+            "choice": "low"
+          },
+          "needs_repository_tools": {
+            "type": "noul",
+            "noul": 1
+          },
+          "needs_agentic_workflow": {
+            "type": "noul",
+            "noul": 0
+          },
+          "needs_long_context": {
+            "type": "noul",
+            "noul": 0
+          },
+          "requirements_ambiguous": {
+            "type": "noul",
+            "noul": 0
+          },
+          "security_sensitive": {
+            "type": "noul",
+            "noul": 0
+          },
+          "tests_executable": {
+            "type": "noul",
+            "noul": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "C05",
+      "item": {
+        "id": "C05",
+        "lang": "Vue 2 → Vue 3",
+        "query": "Migrate the account settings screen to Vue 3 Composition API while preserving validation and analytics events.",
+        "intent": "migration",
+        "complexity": 4,
+        "risk": "medium"
+      },
+      "modelKey": "deepseek",
+      "modelLabel": "DeepSeek V4 Flash",
+      "servedModel": "deepseek/deepseek-v4-flash-0731",
+      "intent": "migration",
+      "risk": "critical",
+      "complexity": 3,
+      "signals": {
+        "needs_repository_tools": 0,
+        "needs_agentic_workflow": 1,
+        "needs_long_context": 0,
+        "requirements_ambiguous": 0,
+        "security_sensitive": 1,
+        "tests_executable": 1
+      },
+      "latency": 116901.19999999553,
+      "cost": 0.002553,
+      "runs": 1,
+      "raw": [
+        {
+          "intent": {
+            "type": "choice",
+            "choice": "migration"
+          },
+          "complexity": {
+            "type": "score",
+            "score": 3
+          },
+          "risk": {
+            "type": "choice",
+            "choice": "critical"
+          },
+          "needs_repository_tools": {
+            "type": "noul",
+            "noul": 0
+          },
+          "needs_agentic_workflow": {
+            "type": "noul",
+            "noul": 1
+          },
+          "needs_long_context": {
+            "type": "noul",
+            "noul": 0
+          },
+          "requirements_ambiguous": {
+            "type": "noul",
+            "noul": 0
+          },
+          "security_sensitive": {
+            "type": "noul",
+            "noul": 1
+          },
+          "tests_executable": {
+            "type": "noul",
+            "noul": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "C06",
+      "item": {
+        "id": "C06",
+        "lang": "SQL · PostgreSQL",
+        "query": "Review this slow reporting query and determine whether the proposed composite index matches its filters and sort order.",
+        "intent": "review",
+        "complexity": 2,
+        "risk": "low"
+      },
+      "modelKey": "deepseek",
+      "modelLabel": "DeepSeek V4 Flash",
+      "servedModel": "deepseek/deepseek-v4-flash-0731",
+      "intent": "review",
+      "risk": "low",
+      "complexity": 3,
+      "signals": {
+        "needs_repository_tools": 0,
+        "needs_agentic_workflow": 0,
+        "needs_long_context": 1,
+        "requirements_ambiguous": 0,
+        "security_sensitive": 0,
+        "tests_executable": 0
+      },
+      "latency": 25799.80000000447,
+      "cost": 0.0002733,
+      "runs": 1,
+      "raw": [
+        {
+          "intent": {
+            "type": "choice",
+            "choice": "review"
+          },
+          "complexity": {
+            "type": "score",
+            "score": 3
+          },
+          "risk": {
+            "type": "choice",
+            "choice": "low"
+          },
+          "needs_repository_tools": {
+            "type": "noul",
+            "noul": 0
+          },
+          "needs_agentic_workflow": {
+            "type": "noul",
+            "noul": 0
+          },
+          "needs_long_context": {
+            "type": "noul",
+            "noul": 1
+          },
+          "requirements_ambiguous": {
+            "type": "noul",
+            "noul": 0
+          },
+          "security_sensitive": {
+            "type": "noul",
+            "noul": 0
+          },
+          "tests_executable": {
+            "type": "noul",
+            "noul": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "C07",
+      "item": {
+        "id": "C07",
+        "lang": "Java · Scheduling",
+        "query": "Fix recurring meetings shifting by one hour after daylight-saving transitions for users in multiple time zones.",
+        "intent": "bug_fix",
+        "complexity": 3,
+        "risk": "medium"
+      },
+      "modelKey": "deepseek",
+      "modelLabel": "DeepSeek V4 Flash",
+      "servedModel": "deepseek/deepseek-v4-flash-0731",
+      "intent": "bug_fix",
+      "risk": "high",
+      "complexity": 3,
+      "signals": {
+        "needs_repository_tools": 1,
+        "needs_agentic_workflow": 0,
+        "needs_long_context": 0,
+        "requirements_ambiguous": 0,
+        "security_sensitive": 0,
+        "tests_executable": 1
+      },
+      "latency": 12499.10000000149,
+      "cost": 0.0000576,
+      "runs": 1,
+      "raw": [
+        {
+          "intent": {
+            "type": "choice",
+            "choice": "bug_fix"
+          },
+          "complexity": {
+            "type": "score",
+            "score": 3
+          },
+          "risk": {
+            "type": "choice",
+            "choice": "high"
+          },
+          "needs_repository_tools": {
+            "type": "noul",
+            "noul": 1
+          },
+          "needs_agentic_workflow": {
+            "type": "noul",
+            "noul": 0
+          },
+          "needs_long_context": {
+            "type": "noul",
+            "noul": 0
+          },
+          "requirements_ambiguous": {
+            "type": "noul",
+            "noul": 0
+          },
+          "security_sensitive": {
+            "type": "noul",
+            "noul": 0
+          },
+          "tests_executable": {
+            "type": "noul",
+            "noul": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "C08",
+      "item": {
+        "id": "C08",
+        "lang": "C# · ASP.NET",
+        "query": "Add CSV export to the inventory search endpoint using the existing filters and a configurable row limit.",
+        "intent": "feature",
+        "complexity": 2,
+        "risk": "low"
+      },
+      "modelKey": "deepseek",
+      "modelLabel": "DeepSeek V4 Flash",
+      "servedModel": "deepseek/deepseek-v4-flash-0731",
+      "intent": "feature",
+      "risk": "low",
+      "complexity": 2,
+      "signals": {
+        "needs_repository_tools": 0,
+        "needs_agentic_workflow": 0,
+        "needs_long_context": 0,
+        "requirements_ambiguous": 0,
+        "security_sensitive": 0,
+        "tests_executable": 1
+      },
+      "latency": 48040.19999999553,
+      "cost": 0.00044964,
+      "runs": 1,
+      "raw": [
+        {
+          "intent": {
+            "type": "choice",
+            "choice": "feature"
+          },
+          "complexity": {
+            "type": "score",
+            "score": 2
+          },
+          "risk": {
+            "type": "choice",
+            "choice": "low"
+          },
+          "needs_repository_tools": {
+            "type": "noul",
+            "noul": 0
+          },
+          "needs_agentic_workflow": {
+            "type": "noul",
+            "noul": 0
+          },
+          "needs_long_context": {
+            "type": "noul",
+            "noul": 0
+          },
+          "requirements_ambiguous": {
+            "type": "noul",
+            "noul": 0
+          },
+          "security_sensitive": {
+            "type": "noul",
+            "noul": 0
+          },
+          "tests_executable": {
+            "type": "noul",
+            "noul": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "C09",
+      "item": {
+        "id": "C09",
+        "lang": "Python · Machine learning",
+        "query": "Review the training pipeline for target leakage caused by features calculated after the prediction timestamp.",
+        "intent": "review",
+        "complexity": 4,
+        "risk": "high"
+      },
+      "modelKey": "deepseek",
+      "modelLabel": "DeepSeek V4 Flash",
+      "servedModel": "deepseek/deepseek-v4-flash-0731",
+      "intent": "review",
+      "risk": "medium",
+      "complexity": 3,
+      "signals": {
+        "needs_repository_tools": 1,
+        "needs_agentic_workflow": 1,
+        "needs_long_context": 1,
+        "requirements_ambiguous": 0,
+        "security_sensitive": 0,
+        "tests_executable": 0
+      },
+      "latency": 58836.30000000447,
+      "cost": 0.000487408,
+      "runs": 1,
+      "raw": [
+        {
+          "intent": {
+            "type": "choice",
+            "choice": "review"
+          },
+          "complexity": {
+            "type": "score",
+            "score": 3
+          },
+          "risk": {
+            "type": "choice",
+            "choice": "medium"
+          },
+          "needs_repository_tools": {
+            "type": "noul",
+            "noul": 1
+          },
+          "needs_agentic_workflow": {
+            "type": "noul",
+            "noul": 1
+          },
+          "needs_long_context": {
+            "type": "noul",
+            "noul": 1
+          },
+          "requirements_ambiguous": {
+            "type": "noul",
+            "noul": 0
+          },
+          "security_sensitive": {
+            "type": "noul",
+            "noul": 0
+          },
+          "tests_executable": {
+            "type": "noul",
+            "noul": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "C10",
+      "item": {
+        "id": "C10",
+        "lang": "Kotlin · HTTP client",
+        "query": "Create integration tests for retry behavior on timeouts, HTTP 429 responses, and successful recovery.",
+        "intent": "test_generation",
+        "complexity": 3,
+        "risk": "medium"
+      },
+      "modelKey": "deepseek",
+      "modelLabel": "DeepSeek V4 Flash",
+      "servedModel": "deepseek/deepseek-v4-flash-0731",
+      "intent": "test_generation",
+      "risk": "low",
+      "complexity": 3,
+      "signals": {
+        "needs_repository_tools": 1,
+        "needs_agentic_workflow": 1,
+        "needs_long_context": 0,
+        "requirements_ambiguous": 0,
+        "security_sensitive": 0,
+        "tests_executable": 1
+      },
+      "latency": 16680.90000000596,
+      "cost": 0.00046025,
+      "runs": 1,
+      "raw": [
+        {
+          "intent": {
+            "type": "choice",
+            "choice": "test_generation"
+          },
+          "complexity": {
+            "type": "score",
+            "score": 3
+          },
+          "risk": {
+            "type": "choice",
+            "choice": "low"
+          },
+          "needs_repository_tools": {
+            "type": "noul",
+            "noul": 1
+          },
+          "needs_agentic_workflow": {
+            "type": "noul",
+            "noul": 1
+          },
+          "needs_long_context": {
+            "type": "noul",
+            "noul": 0
+          },
+          "requirements_ambiguous": {
+            "type": "noul",
+            "noul": 0
+          },
+          "security_sensitive": {
+            "type": "noul",
+            "noul": 0
+          },
+          "tests_executable": {
+            "type": "noul",
+            "noul": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "C11",
+      "item": {
+        "id": "C11",
+        "lang": "MySQL 5.7 → 8.0",
+        "query": "Upgrade the application database to MySQL 8, update incompatible SQL modes, and verify existing replication jobs.",
+        "intent": "migration",
+        "complexity": 4,
+        "risk": "high"
+      },
+      "modelKey": "deepseek",
+      "modelLabel": "DeepSeek V4 Flash",
+      "servedModel": "deepseek/deepseek-v4-flash-0731",
+      "intent": "migration",
+      "risk": "high",
+      "complexity": 4,
+      "signals": {
+        "needs_repository_tools": 1,
+        "needs_agentic_workflow": 1,
+        "needs_long_context": 1,
+        "requirements_ambiguous": 1,
+        "security_sensitive": 0,
+        "tests_executable": 1
+      },
+      "latency": 31030.29999999702,
+      "cost": 0.000558738,
+      "runs": 1,
+      "raw": [
+        {
+          "intent": {
+            "type": "choice",
+            "choice": "migration"
+          },
+          "complexity": {
+            "type": "score",
+            "score": 4
+          },
+          "risk": {
+            "type": "choice",
+            "choice": "high"
+          },
+          "needs_repository_tools": {
+            "type": "noul",
+            "noul": 1
+          },
+          "needs_agentic_workflow": {
+            "type": "noul",
+            "noul": 1
+          },
+          "needs_long_context": {
+            "type": "noul",
+            "noul": 1
+          },
+          "requirements_ambiguous": {
+            "type": "noul",
+            "noul": 1
+          },
+          "security_sensitive": {
+            "type": "noul",
+            "noul": 0
+          },
+          "tests_executable": {
+            "type": "noul",
+            "noul": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "C12",
+      "item": {
+        "id": "C12",
+        "lang": "C# · Logging",
+        "query": "Replace ad-hoc string logging in six services with structured event templates while preserving log levels.",
+        "intent": "refactor",
+        "complexity": 2,
+        "risk": "medium"
+      },
+      "modelKey": "deepseek",
+      "modelLabel": "DeepSeek V4 Flash",
+      "servedModel": "deepseek/deepseek-v4-flash-0731",
+      "intent": "refactor",
+      "risk": "low",
+      "complexity": 3,
+      "signals": {
+        "needs_repository_tools": 1,
+        "needs_agentic_workflow": 1,
+        "needs_long_context": 1,
+        "requirements_ambiguous": 0,
+        "security_sensitive": 0,
+        "tests_executable": 1
+      },
+      "latency": 46078.59999999404,
+      "cost": 0.000873034,
+      "runs": 1,
+      "raw": [
+        {
+          "intent": {
+            "type": "choice",
+            "choice": "refactor"
+          },
+          "complexity": {
+            "type": "score",
+            "score": 3
+          },
+          "risk": {
+            "type": "choice",
+            "choice": "low"
+          },
+          "needs_repository_tools": {
+            "type": "noul",
+            "noul": 1
+          },
+          "needs_agentic_workflow": {
+            "type": "noul",
+            "noul": 1
+          },
+          "needs_long_context": {
+            "type": "noul",
+            "noul": 1
+          },
+          "requirements_ambiguous": {
+            "type": "noul",
+            "noul": 0
+          },
+          "security_sensitive": {
+            "type": "noul",
+            "noul": 0
+          },
+          "tests_executable": {
+            "type": "noul",
+            "noul": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "C13",
+      "item": {
+        "id": "C13",
+        "lang": "Node.js · Redis",
+        "query": "Fix user profile updates remaining stale because cache invalidation runs before the database transaction commits.",
+        "intent": "bug_fix",
+        "complexity": 3,
+        "risk": "medium"
+      },
+      "modelKey": "deepseek",
+      "modelLabel": "DeepSeek V4 Flash",
+      "servedModel": "deepseek/deepseek-v4-flash-0731",
+      "intent": "bug_fix",
+      "risk": "medium",
+      "complexity": 2,
+      "signals": {
+        "needs_repository_tools": 1,
+        "needs_agentic_workflow": 1,
+        "needs_long_context": 0,
+        "requirements_ambiguous": 0,
+        "security_sensitive": 0,
+        "tests_executable": 1
+      },
+      "latency": 43510.20000000298,
+      "cost": 0.00087914,
+      "runs": 1,
+      "raw": [
+        {
+          "intent": {
+            "type": "choice",
+            "choice": "bug_fix"
+          },
+          "complexity": {
+            "type": "score",
+            "score": 2
+          },
+          "risk": {
+            "type": "choice",
+            "choice": "medium"
+          },
+          "needs_repository_tools": {
+            "type": "noul",
+            "noul": 1
+          },
+          "needs_agentic_workflow": {
+            "type": "noul",
+            "noul": 1
+          },
+          "needs_long_context": {
+            "type": "noul",
+            "noul": 0
+          },
+          "requirements_ambiguous": {
+            "type": "noul",
+            "noul": 0
+          },
+          "security_sensitive": {
+            "type": "noul",
+            "noul": 0
+          },
+          "tests_executable": {
+            "type": "noul",
+            "noul": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "C14",
+      "item": {
+        "id": "C14",
+        "lang": "Go · Feature flags",
+        "query": "Add percentage-based feature rollout with stable user bucketing, team overrides, and an emergency disable switch.",
+        "intent": "feature",
+        "complexity": 4,
+        "risk": "medium"
+      },
+      "modelKey": "deepseek",
+      "modelLabel": "DeepSeek V4 Flash",
+      "servedModel": "deepseek/deepseek-v4-flash-0731",
+      "intent": "feature",
+      "risk": "medium",
+      "complexity": 3,
+      "signals": {
+        "needs_repository_tools": 1,
+        "needs_agentic_workflow": 0,
+        "needs_long_context": 0,
+        "requirements_ambiguous": 0,
+        "security_sensitive": 0,
+        "tests_executable": 1
+      },
+      "latency": 29294.29999999702,
+      "cost": 0.00022326,
+      "runs": 1,
+      "raw": [
+        {
+          "intent": {
+            "type": "choice",
+            "choice": "feature"
+          },
+          "complexity": {
+            "type": "score",
+            "score": 3
+          },
+          "risk": {
+            "type": "choice",
+            "choice": "medium"
+          },
+          "needs_repository_tools": {
+            "type": "noul",
+            "noul": 1
+          },
+          "needs_agentic_workflow": {
+            "type": "noul",
+            "noul": 0
+          },
+          "needs_long_context": {
+            "type": "noul",
+            "noul": 0
+          },
+          "requirements_ambiguous": {
+            "type": "noul",
+            "noul": 0
+          },
+          "security_sensitive": {
+            "type": "noul",
+            "noul": 0
+          },
+          "tests_executable": {
+            "type": "noul",
+            "noul": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "C15",
+      "item": {
+        "id": "C15",
+        "lang": "Terraform · Azure",
+        "query": "Add automated tests for a network module covering optional subnets, custom DNS, and invalid address ranges.",
+        "intent": "test_generation",
+        "complexity": 3,
+        "risk": "medium"
+      },
+      "modelKey": "deepseek",
+      "modelLabel": "DeepSeek V4 Flash",
+      "servedModel": "deepseek/deepseek-v4-flash-0731",
+      "intent": "test_generation",
+      "risk": "low",
+      "complexity": 2,
+      "signals": {
+        "needs_repository_tools": 0,
+        "needs_agentic_workflow": 0,
+        "needs_long_context": 0,
+        "requirements_ambiguous": 0,
+        "security_sensitive": 0,
+        "tests_executable": 1
+      },
+      "latency": 59694.79999999702,
+      "cost": 0.00050688,
+      "runs": 1,
+      "raw": [
+        {
+          "intent": {
+            "type": "choice",
+            "choice": "test_generation"
+          },
+          "complexity": {
+            "type": "score",
+            "score": 2
+          },
+          "risk": {
+            "type": "choice",
+            "choice": "low"
+          },
+          "needs_repository_tools": {
+            "type": "noul",
+            "noul": 0
+          },
+          "needs_agentic_workflow": {
+            "type": "noul",
+            "noul": 0
+          },
+          "needs_long_context": {
+            "type": "noul",
+            "noul": 0
+          },
+          "requirements_ambiguous": {
+            "type": "noul",
+            "noul": 0
+          },
+          "security_sensitive": {
+            "type": "noul",
+            "noul": 0
+          },
+          "tests_executable": {
+            "type": "noul",
+            "noul": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "C16",
+      "item": {
+        "id": "C16",
+        "lang": "TypeScript · Monorepo",
+        "query": "Review the dependency graph and identify packages that violate the rule that UI modules cannot import data-access implementations.",
+        "intent": "review",
+        "complexity": 3,
+        "risk": "low"
+      },
+      "modelKey": "deepseek",
+      "modelLabel": "DeepSeek V4 Flash",
+      "servedModel": "deepseek/deepseek-v4-flash-0731",
+      "intent": "review",
+      "risk": "medium",
+      "complexity": 3,
+      "signals": {
+        "needs_repository_tools": 1,
+        "needs_agentic_workflow": 1,
+        "needs_long_context": 1,
+        "requirements_ambiguous": 0,
+        "security_sensitive": 0,
+        "tests_executable": 0
+      },
+      "latency": 2195.4000000059605,
+      "cost": 0.00005572,
+      "runs": 1,
+      "raw": [
+        {
+          "intent": {
+            "type": "choice",
+            "choice": "review"
+          },
+          "complexity": {
+            "type": "score",
+            "score": 3
+          },
+          "risk": {
+            "type": "choice",
+            "choice": "medium"
+          },
+          "needs_repository_tools": {
+            "type": "noul",
+            "noul": 1
+          },
+          "needs_agentic_workflow": {
+            "type": "noul",
+            "noul": 1
+          },
+          "needs_long_context": {
+            "type": "noul",
+            "noul": 1
+          },
+          "requirements_ambiguous": {
+            "type": "noul",
+            "noul": 0
+          },
+          "security_sensitive": {
+            "type": "noul",
+            "noul": 0
+          },
+          "tests_executable": {
+            "type": "noul",
+            "noul": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "C17",
+      "item": {
+        "id": "C17",
+        "lang": "Pandas → Polars",
+        "query": "Migrate a daily aggregation pipeline from Pandas to Polars while preserving null handling and output column order.",
+        "intent": "migration",
+        "complexity": 3,
+        "risk": "medium"
+      },
+      "modelKey": "deepseek",
+      "modelLabel": "DeepSeek V4 Flash",
+      "servedModel": "deepseek/deepseek-v4-flash-0731",
+      "intent": "migration",
+      "risk": "medium",
+      "complexity": 3,
+      "signals": {
+        "needs_repository_tools": 1,
+        "needs_agentic_workflow": 0,
+        "needs_long_context": 0,
+        "requirements_ambiguous": 0,
+        "security_sensitive": 0,
+        "tests_executable": 1
+      },
+      "latency": 6152.79999999702,
+      "cost": 0.000059949481,
+      "runs": 1,
+      "raw": [
+        {
+          "intent": {
+            "type": "choice",
+            "choice": "migration"
+          },
+          "complexity": {
+            "type": "score",
+            "score": 3
+          },
+          "risk": {
+            "type": "choice",
+            "choice": "medium"
+          },
+          "needs_repository_tools": {
+            "type": "noul",
+            "noul": 1
+          },
+          "needs_agentic_workflow": {
+            "type": "noul",
+            "noul": 0
+          },
+          "needs_long_context": {
+            "type": "noul",
+            "noul": 0
+          },
+          "requirements_ambiguous": {
+            "type": "noul",
+            "noul": 0
+          },
+          "security_sensitive": {
+            "type": "noul",
+            "noul": 0
+          },
+          "tests_executable": {
+            "type": "noul",
+            "noul": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "C18",
+      "item": {
+        "id": "C18",
+        "lang": "Swift · iOS",
+        "query": "Add offline search over downloaded articles with prefix matching and automatic index refresh after synchronization.",
+        "intent": "feature",
+        "complexity": 3,
+        "risk": "medium"
+      },
+      "modelKey": "deepseek",
+      "modelLabel": "DeepSeek V4 Flash",
+      "servedModel": "deepseek/deepseek-v4-flash-0731",
+      "intent": "feature",
+      "risk": "medium",
+      "complexity": 4,
+      "signals": {
+        "needs_repository_tools": 0,
+        "needs_agentic_workflow": 0,
+        "needs_long_context": 0,
+        "requirements_ambiguous": 0,
+        "security_sensitive": 0,
+        "tests_executable": 1
+      },
+      "latency": 42717.10000000149,
+      "cost": 0.00017556,
+      "runs": 1,
+      "raw": [
+        {
+          "intent": {
+            "type": "choice",
+            "choice": "feature"
+          },
+          "complexity": {
+            "type": "score",
+            "score": 4
+          },
+          "risk": {
+            "type": "choice",
+            "choice": "medium"
+          },
+          "needs_repository_tools": {
+            "type": "noul",
+            "noul": 0
+          },
+          "needs_agentic_workflow": {
+            "type": "noul",
+            "noul": 0
+          },
+          "needs_long_context": {
+            "type": "noul",
+            "noul": 0
+          },
+          "requirements_ambiguous": {
+            "type": "noul",
+            "noul": 0
+          },
+          "security_sensitive": {
+            "type": "noul",
+            "noul": 0
+          },
+          "tests_executable": {
+            "type": "noul",
+            "noul": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "C19",
+      "item": {
+        "id": "C19",
+        "lang": "Python · Message queue",
+        "query": "Fix event consumers applying updates out of order when delayed messages arrive after newer versions.",
+        "intent": "bug_fix",
+        "complexity": 4,
+        "risk": "high"
+      },
+      "modelKey": "deepseek",
+      "modelLabel": "DeepSeek V4 Flash",
+      "servedModel": "deepseek/deepseek-v4-flash-0731",
+      "intent": "bug_fix",
+      "risk": "high",
+      "complexity": 4,
+      "signals": {
+        "needs_repository_tools": 1,
+        "needs_agentic_workflow": 0,
+        "needs_long_context": 1,
+        "requirements_ambiguous": 0,
+        "security_sensitive": 0,
+        "tests_executable": 1
+      },
+      "latency": 4650,
+      "cost": 0.000059497388,
+      "runs": 1,
+      "raw": [
+        {
+          "intent": {
+            "type": "choice",
+            "choice": "bug_fix"
+          },
+          "complexity": {
+            "type": "score",
+            "score": 4
+          },
+          "risk": {
+            "type": "choice",
+            "choice": "high"
+          },
+          "needs_repository_tools": {
+            "type": "noul",
+            "noul": 1
+          },
+          "needs_agentic_workflow": {
+            "type": "noul",
+            "noul": 0
+          },
+          "needs_long_context": {
+            "type": "noul",
+            "noul": 1
+          },
+          "requirements_ambiguous": {
+            "type": "noul",
+            "noul": 0
+          },
+          "security_sensitive": {
+            "type": "noul",
+            "noul": 0
+          },
+          "tests_executable": {
+            "type": "noul",
+            "noul": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "C20",
+      "item": {
+        "id": "C20",
+        "lang": "Python · Airflow",
+        "query": "Extract repeated task-group creation from twelve DAGs into a shared builder without changing dependencies or schedules.",
+        "intent": "refactor",
+        "complexity": 4,
+        "risk": "high"
+      },
+      "modelKey": "deepseek",
+      "modelLabel": "DeepSeek V4 Flash",
+      "servedModel": "deepseek/deepseek-v4-flash-0731",
+      "intent": "refactor",
+      "risk": "medium",
+      "complexity": 3,
+      "signals": {
+        "needs_repository_tools": 1,
+        "needs_agentic_workflow": 1,
+        "needs_long_context": 0,
+        "requirements_ambiguous": 0,
+        "security_sensitive": 0,
+        "tests_executable": 1
+      },
+      "latency": 52805.10000000149,
+      "cost": 0.00086871,
+      "runs": 1,
+      "raw": [
+        {
+          "intent": {
+            "type": "choice",
+            "choice": "refactor"
+          },
+          "complexity": {
+            "type": "score",
+            "score": 3
+          },
+          "risk": {
+            "type": "choice",
+            "choice": "medium"
+          },
+          "needs_repository_tools": {
+            "type": "noul",
+            "noul": 1
+          },
+          "needs_agentic_workflow": {
+            "type": "noul",
+            "noul": 1
+          },
+          "needs_long_context": {
+            "type": "noul",
+            "noul": 0
+          },
+          "requirements_ambiguous": {
+            "type": "noul",
+            "noul": 0
+          },
+          "security_sensitive": {
+            "type": "noul",
+            "noul": 0
+          },
+          "tests_executable": {
+            "type": "noul",
+            "noul": 1
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A lightweight benchmark for testing Jev as a coding-query classifier and signal extractor.">
+  <title>Jev Coding Signal Lab</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b1020'/%3E%3Cpath d='M17 20h30v8H34v13c0 8-5 13-14 13l-3-8c6 0 8-2 8-6V28h-8z' fill='%236ee7c7'/%3E%3Ccircle cx='45' cy='44' r='6' fill='%23f5c451'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="brand-mark">J</span><span>Jev Coding Signal Lab</span></div>
+    <div class="status" id="connectionStatus"><span class="dot"></span>Ready</div>
+  </header>
+
+  <main>
+    <section class="control-panel" aria-labelledby="setup-title">
+      <div class="section-heading">
+        <div><p class="eyebrow">CLASSIFIER BENCHMARK</p><h1 id="setup-title">Which model extracts the best coding signals?</h1></div>
+        <p class="lede">Compare Jev with two widely used, low-cost structured-output models on 50 synthetic coding tickets.</p>
+      </div>
+      <div class="controls-grid">
+        <label class="field field-key">
+          <span>OpenRouter API key</span>
+          <span class="input-row"><input id="apiKey" type="password" autocomplete="off" placeholder="sk-or-v1-…"><button class="icon-button" id="toggleKey" type="button" aria-label="Show API key">Show</button></span>
+          <small>Kept in this tab only. Never saved.</small>
+        </label>
+        <label class="field">
+          <span>Repeat each query</span>
+          <select id="repeatCount">
+            <option value="1" selected>1 run</option>
+            <option value="3">3 runs</option>
+            <option value="5">5 runs</option>
+          </select>
+        </label>
+        <label class="field">
+          <span>Samples per run</span>
+          <select id="sampleCount">
+            <option value="all" selected>All selected</option>
+            <option value="5">5 samples</option>
+            <option value="10">10 samples</option>
+            <option value="15">15 samples</option>
+            <option value="20">20 samples</option>
+            <option value="30">30 samples</option>
+            <option value="40">40 samples</option>
+            <option value="50">50 samples</option>
+          </select>
+          <small>Matching progress and results are saved in this browser.</small>
+        </label>
+        <label class="field">
+          <span>Delay between calls</span>
+          <select id="callDelay">
+            <option value="500">0.5 seconds</option>
+            <option value="1000" selected>1 second</option>
+            <option value="2000">2 seconds</option>
+            <option value="3000">3 seconds</option>
+          </select>
+          <small>Transient failures retry up to 3 times.</small>
+        </label>
+        <div class="action-stack">
+          <button class="primary" id="runAll" type="button">Run benchmark <span>→</span></button>
+          <button class="secondary" id="stopRun" type="button" disabled>Stop</button>
+        </div>
+        <fieldset class="classifier-field">
+          <legend>Models to compare</legend>
+          <label class="model-option"><input class="classifier-check" type="checkbox" value="jev" checked><span><strong>Jev 1.13</strong><small>Native probabilities · System One API</small></span></label>
+          <label class="model-option"><input class="classifier-check" type="checkbox" value="qwen" checked><span><strong>Qwen3 30B A3B</strong><small>Fast open-weight baseline · JSON schema</small></span></label>
+          <label class="model-option"><input class="classifier-check" type="checkbox" value="deepseek" checked><span><strong>DeepSeek V4 Flash</strong><small>Efficient reasoning baseline · JSON schema</small></span></label>
+        </fieldset>
+      </div>
+      <div class="progress-wrap" id="progressWrap" hidden>
+        <div class="progress-copy"><span id="progressLabel">Preparing…</span><span id="progressCount">0 / 0</span></div>
+        <div class="progress-track"><div id="progressBar"></div></div>
+      </div>
+    </section>
+
+    <section class="model-summary" id="modelSummary" aria-label="Model comparison summary"></section>
+
+    <nav class="tabs" aria-label="Workspace views">
+      <button class="tab active" data-tab="dataset">Dataset <span id="datasetCount">50</span></button>
+      <button class="tab" data-tab="results">Results <span id="resultCount">0</span></button>
+      <button class="tab" data-tab="schema">Signal schema</button>
+    </nav>
+
+    <section class="tab-panel active" id="datasetPanel">
+      <div class="toolbar">
+        <div class="filters" role="group" aria-label="Dataset filters">
+          <button class="filter active" data-filter="all">All</button>
+          <button class="filter" data-filter="bug_fix">Bug fix</button>
+          <button class="filter" data-filter="feature">Feature</button>
+          <button class="filter" data-filter="refactor">Refactor</button>
+          <button class="filter" data-filter="test_generation">Tests</button>
+          <button class="filter" data-filter="migration">Migration</button>
+          <button class="filter" data-filter="review">Review</button>
+          <button class="filter" data-filter="other">Other</button>
+        </div>
+        <button class="secondary" id="addCase" type="button">+ Add case</button>
+      </div>
+      <div class="table-card">
+        <table>
+          <thead><tr><th><input type="checkbox" id="selectAll" checked aria-label="Select all cases"></th><th>Query</th><th>Expected intent</th><th>Complexity words</th><th>Complexity numeric</th><th>Risk</th><th></th></tr></thead>
+          <tbody id="datasetBody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="tab-panel" id="resultsPanel">
+      <div class="toolbar">
+        <p class="hint" id="resultsHint">Run the benchmark to compare Jev with the labeled dataset.</p>
+        <div class="toolbar-actions">
+          <button class="secondary" id="exportReport" type="button" disabled>Export report (.md)</button>
+          <button class="secondary" id="exportResults" type="button" disabled>Export JSON</button>
+        </div>
+      </div>
+      <div class="table-card">
+        <table>
+          <thead><tr><th>Model</th><th>Case</th><th>Intent</th><th>Complexity words</th><th>Complexity numeric</th><th>Risk</th><th>Signals</th><th>Latency</th></tr></thead>
+          <tbody id="resultsBody"><tr><td colspan="8" class="empty">No results yet.</td></tr></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="tab-panel" id="schemaPanel">
+      <div class="schema-grid">
+        <article><span class="schema-type">CHOICE</span><h2>Intent</h2><p>Bug fix, feature, refactor, test generation, migration, review/explanation, or other.</p></article>
+        <article><span class="schema-type">CHOICE</span><h2>Complexity</h2><p>Trivial, simple, moderate, complex, or very complex.</p></article>
+        <article><span class="schema-type">CHOICE · 1–5</span><h2>Complexity numeric</h2><p>The equivalent five levels expressed as numeric labels for accuracy comparison.</p></article>
+        <article><span class="schema-type">CHOICE</span><h2>Risk</h2><p>Low, medium, high, or critical based on blast radius and sensitive domains.</p></article>
+        <article class="wide"><span class="schema-type">NOUL SIGNALS</span><h2>Feature vector</h2><div class="signal-list"><code>needs_repository_tools</code><code>needs_agentic_workflow</code><code>needs_long_context</code><code>requirements_ambiguous</code><code>security_sensitive</code><code>tests_executable</code></div></article>
+      </div>
+      <div class="note"><strong>Fair-comparison note</strong><p>Jev returns native probabilities. Qwen3 30B A3B and DeepSeek V4 Flash return schema-constrained labels and booleans, so repeated runs measure stability but do not create calibrated probabilities. Final routing should still combine extracted signals with your internal leaderboard, policy, cost, and latency in deterministic code.</p></div>
+    </section>
+  </main>
+
+  <dialog id="caseDialog">
+    <form method="dialog" id="caseForm">
+      <div class="dialog-head"><div><p class="eyebrow">CUSTOM TEST</p><h2>Add a coding query</h2></div><button value="cancel" class="close" aria-label="Close">×</button></div>
+      <label class="field"><span>Query</span><textarea id="caseQuery" rows="6" required placeholder="Describe a coding task or paste a sanitized Jira ticket…"></textarea></label>
+      <div class="dialog-grid">
+        <label class="field"><span>Expected intent</span><select id="caseIntent"><option>bug_fix</option><option>feature</option><option>refactor</option><option>test_generation</option><option>migration</option><option>review</option><option>other</option></select></label>
+        <label class="field"><span>Complexity</span><select id="caseComplexity"><option>trivial</option><option>simple</option><option selected>moderate</option><option>complex</option><option>very_complex</option></select></label>
+        <label class="field"><span>Risk</span><select id="caseRisk"><option>low</option><option>medium</option><option>high</option><option>critical</option></select></label>
+      </div>
+      <div class="dialog-actions"><button value="cancel" class="secondary">Cancel</button><button id="saveCase" value="default" class="primary">Add case</button></div>
+    </form>
+  </dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js" defer></script>
+</body>
+</html>
