@@ -212,8 +212,12 @@ function renderResults(){
 
 function mdCell(value){return String(value??'—').replaceAll('|','\\|').replace(/\r?\n/g,' ');}
 function downloadFile(content,filename,type){const blob=new Blob([content],{type});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=filename;a.click();URL.revokeObjectURL(a.href);}
-function buildMarkdownReport(){
-  const generated=new Date(),successful=results.filter(r=>!r.error),failed=results.filter(r=>r.error),partial=results.filter(r=>r.warning);
+function exportMarkdownReport(){
+  const generated=new Date(),timestamp=generated.toISOString().replaceAll(':','-').replace('.','-');
+  downloadFile(buildMarkdownReport(generated),`jev-coding-signal-report-${timestamp}.md`,'text/markdown');
+}
+function buildMarkdownReport(generated=new Date()){
+  const successful=results.filter(r=>!r.error),failed=results.filter(r=>r.error),partial=results.filter(r=>r.warning);
   const usedModels=MODELS.filter(model=>results.some(r=>r.modelKey===model.key));
   const uniqueCases=[...new Map(results.map(r=>[r.id,r.item])).values()];
   const modelRows=usedModels.map(model=>{const rows=successful.filter(r=>r.modelKey===model.key),m=metrics(rows);return m?`| ${mdCell(model.label)} | ${m.n} | ${Math.round(m.exact*100)}% | ${Math.round(m.intent*100)}% | ${Math.round(m.risk*100)}% | ${Math.round(m.complexity*100)}% | ${Math.round(m.complexityNumeric*100)}% | ${Math.round(m.latency)} ms | ${m.cost?'$'+m.cost.toFixed(5):'n/a'} |`:`| ${mdCell(model.label)} | 0 | — | — | — | — | — | — | — |`;});
@@ -251,7 +255,11 @@ async function runBenchmark(){
       renderResults();
     }}
     if(!failed)clearCheckpoint(signature);else saveCheckpoint(signature,results);
-    toast(`Benchmark complete${failed?` · ${failed} failed case${failed>1?'s':''}`:''}`,failed>0);switchTab('results');
+    switchTab('results');
+    try{
+      exportMarkdownReport();
+      toast(`Benchmark complete · report download started${failed?` · ${failed} failed case${failed>1?'s':''}`:''}`,failed>0);
+    }catch(error){toast('Benchmark complete, but the report download could not start. Use Export report (.md) to retry.',true);}
   }catch(error){if(error.name==='AbortError')toast('Run stopped.');else toast(error.message,true);}
   finally{$('runAll').disabled=false;$('stopRun').disabled=true;$('connectionStatus').innerHTML='<span class="dot"></span>Ready';abortController=null;}
 }
@@ -264,7 +272,7 @@ $('selectAll').onchange=(e)=>document.querySelectorAll('.case-check').forEach(c=
 $('runAll').onclick=runBenchmark;$('stopRun').onclick=()=>abortController?.abort();
 $('addCase').onclick=()=>$('caseDialog').showModal();
 $('caseForm').addEventListener('submit',e=>{if(e.submitter?.value==='cancel')return;e.preventDefault();const q=$('caseQuery').value.trim();if(!q)return;const complexity=$('caseComplexity').value;cases.push({id:`U${String(cases.filter(c=>c.custom).length+1).padStart(2,'0')}`,lang:'Custom query',query:q,intent:$('caseIntent').value,complexity,complexity_numeric:COMPLEXITY_NUMERIC[complexity],risk:$('caseRisk').value,custom:true});$('caseDialog').close();$('caseForm').reset();renderDataset();toast('Custom case added.');});
-$('exportReport').onclick=()=>downloadFile(buildMarkdownReport(),`jev-coding-signal-report-${new Date().toISOString().slice(0,10)}.md`,'text/markdown');
+$('exportReport').onclick=exportMarkdownReport;
 $('exportResults').onclick=()=>downloadFile(JSON.stringify({generated_at:new Date().toISOString(),models:getSelectedModels().map(m=>m.id),results},null,2),'coding-classifier-comparison.json','application/json');
 
 function registerWebMCP(){const ctx=document.modelContext;if(!ctx?.registerTool)return;try{void Promise.resolve(ctx.registerTool({name:'stage_coding_query',title:'Stage coding query',description:'Add a labeled coding query to the visible classifier benchmark dataset.',inputSchema:{type:'object',properties:{query:{type:'string'},intent:{type:'string',enum:INTENTS},complexity:{type:'string',enum:COMPLEXITIES},risk:{type:'string',enum:RISKS}},required:['query','intent','complexity','risk'],additionalProperties:false},annotations:{readOnlyHint:false,untrustedContentHint:true},execute(input){if(!input||typeof input.query!=='string'||!INTENTS.includes(input.intent)||!COMPLEXITIES.includes(input.complexity)||!RISKS.includes(input.risk))throw new Error('Invalid coding case');const item={id:`U${String(cases.filter(c=>c.custom).length+1).padStart(2,'0')}`,lang:'Agent-staged query',query:input.query,intent:input.intent,complexity:input.complexity,complexity_numeric:COMPLEXITY_NUMERIC[input.complexity],risk:input.risk,custom:true};cases.push(item);renderDataset();return {id:item.id,total_cases:cases.length};}})).catch(()=>{});}catch{}}
