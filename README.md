@@ -1,31 +1,25 @@
 # Jev Coding Signal Lab
 
-Start the static app from this directory:
+Start the local app (Node.js 18 or newer):
 
 ```bash
-python3 -m http.server 8000 --bind 127.0.0.1 --directory dist
+node server.cjs
 ```
 
-Open http://localhost:8000 and enter your OpenRouter API key to run a benchmark.
+Open http://127.0.0.1:8000. The server reads `OPENROUTER_API_KEY` from
+`.env.local` at the project root (or from its environment) and proxies benchmark
+requests to OpenRouter. The key is not sent to the browser. `.env.local` is
+ignored by Git; `.env.example` documents the variable. Restart the app using
+this command instead of the old static server.
 
-Keep local credentials in `.env.local` at the project root using
-`OPENROUTER_API_KEY=your-key`. Git ignores this file. `.env.example` documents
-the variable without a key. The static browser app does not read environment
-files; enter the key in its password field. Serve only `dist/` as shown above
-to keep local credentials outside the web-served directory.
-
-Each finished benchmark automatically downloads a timestamped Markdown report
-to your browser's download location. The report includes the model comparison,
-accuracy, latency, cost, detailed results, dataset, and any failures or partial
-results. A stopped run keeps its browser checkpoint for resuming and does not
-download a completion report.
-
-If your browser blocks an automatic download, use **Results → Export report (.md)**.
-Use **Export JSON** to save the raw results. Reports are browser downloads; the
-static app cannot write them directly into the project's `data` directory.
+Each finished benchmark opens its report in the **Report** tab. It includes the
+model comparison, accuracy, latency, cost, detailed results, dataset, and any
+failures or partial results. Select **Download report (.md)** to save it. A
+stopped run keeps its browser checkpoint for resuming. Use **Export JSON** in
+the Results tab to save raw results.
 
 Run the report regression checks with Node.js:
 
 ```bash
-node --test tests/report.test.cjs
+node --test tests/*.test.cjs
 ```

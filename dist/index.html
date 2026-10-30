@@ -18,14 +18,9 @@
     <section class="control-panel" aria-labelledby="setup-title">
       <div class="section-heading">
         <div><p class="eyebrow">CLASSIFIER BENCHMARK</p><h1 id="setup-title">Which model extracts the best coding signals?</h1></div>
-        <p class="lede">Compare Jev with two widely used, low-cost structured-output models on 50 synthetic coding tickets.</p>
+        <p class="lede">Compare decision models and structured-output baselines on 58 synthetic coding tasks, including longer agent-style contexts.</p>
       </div>
       <div class="controls-grid">
-        <label class="field field-key">
-          <span>OpenRouter API key</span>
-          <span class="input-row"><input id="apiKey" type="password" autocomplete="off" placeholder="sk-or-v1-…"><button class="icon-button" id="toggleKey" type="button" aria-label="Show API key">Show</button></span>
-          <small>Kept in this tab only. Never saved.</small>
-        </label>
         <label class="field">
           <span>Repeat each query</span>
           <select id="repeatCount">
@@ -65,6 +60,8 @@
         <fieldset class="classifier-field">
           <legend>Models to compare</legend>
           <label class="model-option"><input class="classifier-check" type="checkbox" value="jev" checked><span><strong>Jev 1.13</strong><small>Native probabilities · System One API</small></span></label>
+          <label class="model-option"><input class="classifier-check" type="checkbox" value="jev114" checked><span><strong>Jev 1.14</strong><small>Native probabilities · System One API</small></span></label>
+          <label class="model-option"><input class="classifier-check" type="checkbox" value="decision1" checked><span><strong>Microsoft Decision-1</strong><small>Native probabilities · System One API</small></span></label>
           <label class="model-option"><input class="classifier-check" type="checkbox" value="qwen" checked><span><strong>Qwen3 30B A3B</strong><small>Fast open-weight baseline · JSON schema</small></span></label>
           <label class="model-option"><input class="classifier-check" type="checkbox" value="deepseek" checked><span><strong>DeepSeek V4 Flash</strong><small>Efficient reasoning baseline · JSON schema</small></span></label>
         </fieldset>
@@ -78,8 +75,9 @@
     <section class="model-summary" id="modelSummary" aria-label="Model comparison summary"></section>
 
     <nav class="tabs" aria-label="Workspace views">
-      <button class="tab active" data-tab="dataset">Dataset <span id="datasetCount">50</span></button>
+      <button class="tab active" data-tab="dataset">Dataset <span id="datasetCount">58</span></button>
       <button class="tab" data-tab="results">Results <span id="resultCount">0</span></button>
+      <button class="tab" data-tab="report">Report</button>
       <button class="tab" data-tab="schema">Signal schema</button>
     </nav>
 
@@ -99,7 +97,7 @@
       </div>
       <div class="table-card">
         <table>
-          <thead><tr><th><input type="checkbox" id="selectAll" checked aria-label="Select all cases"></th><th>Query</th><th>Expected intent</th><th>Complexity words</th><th>Complexity numeric</th><th>Risk</th><th></th></tr></thead>
+          <thead><tr><th><input type="checkbox" id="selectAll" checked aria-label="Select all cases"></th><th>Query</th><th>Expected intent</th><th>Complexity</th><th>Risk</th><th></th></tr></thead>
           <tbody id="datasetBody"></tbody>
         </table>
       </div>
@@ -109,27 +107,33 @@
       <div class="toolbar">
         <p class="hint" id="resultsHint">Run the benchmark to compare Jev with the labeled dataset.</p>
         <div class="toolbar-actions">
-          <button class="secondary" id="exportReport" type="button" disabled>Export report (.md)</button>
           <button class="secondary" id="exportResults" type="button" disabled>Export JSON</button>
         </div>
       </div>
       <div class="table-card">
         <table>
-          <thead><tr><th>Model</th><th>Case</th><th>Intent</th><th>Complexity words</th><th>Complexity numeric</th><th>Risk</th><th>Signals</th><th>Latency</th></tr></thead>
-          <tbody id="resultsBody"><tr><td colspan="8" class="empty">No results yet.</td></tr></tbody>
+          <thead><tr><th>Model</th><th>Case</th><th>Intent</th><th>Complexity</th><th>Risk</th><th>Signals</th><th>Latency</th></tr></thead>
+          <tbody id="resultsBody"><tr><td colspan="7" class="empty">No results yet.</td></tr></tbody>
         </table>
       </div>
+    </section>
+
+    <section class="tab-panel" id="reportPanel">
+      <div class="toolbar">
+        <p class="hint">Review the completed report here, then download it when you need a copy.</p>
+        <button class="secondary" id="exportReport" type="button" disabled>Download report (.md)</button>
+      </div>
+      <div id="reportContent" class="report-content"><p class="hint">Complete a benchmark to see its report.</p></div>
     </section>
 
     <section class="tab-panel" id="schemaPanel">
       <div class="schema-grid">
         <article><span class="schema-type">CHOICE</span><h2>Intent</h2><p>Bug fix, feature, refactor, test generation, migration, review/explanation, or other.</p></article>
         <article><span class="schema-type">CHOICE</span><h2>Complexity</h2><p>Trivial, simple, moderate, complex, or very complex.</p></article>
-        <article><span class="schema-type">CHOICE · 1–5</span><h2>Complexity numeric</h2><p>The equivalent five levels expressed as numeric labels for accuracy comparison.</p></article>
         <article><span class="schema-type">CHOICE</span><h2>Risk</h2><p>Low, medium, high, or critical based on blast radius and sensitive domains.</p></article>
         <article class="wide"><span class="schema-type">NOUL SIGNALS</span><h2>Feature vector</h2><div class="signal-list"><code>needs_repository_tools</code><code>needs_agentic_workflow</code><code>needs_long_context</code><code>requirements_ambiguous</code><code>security_sensitive</code><code>tests_executable</code></div></article>
       </div>
-      <div class="note"><strong>Fair-comparison note</strong><p>Jev returns native probabilities. Qwen3 30B A3B and DeepSeek V4 Flash return schema-constrained labels and booleans, so repeated runs measure stability but do not create calibrated probabilities. Final routing should still combine extracted signals with your internal leaderboard, policy, cost, and latency in deterministic code.</p></div>
+      <div class="note"><strong>Fair-comparison note</strong><p>Jev and Microsoft Decision-1 return native probabilities. Qwen3 30B A3B and DeepSeek V4 Flash return schema-constrained labels and booleans, so repeated runs measure stability but do not create calibrated probabilities. Final routing should still combine extracted signals with your internal leaderboard, policy, cost, and latency in deterministic code.</p></div>
     </section>
   </main>
 
